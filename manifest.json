@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "FigmaCN",
+  "description": "Figma 中文插件",
+  "version": "0.1",
+  "permissions": [
+    "https://*.figma.com/*",
+    "storage"
+  ],
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.figma.com/*",
+        "https://*.figma.com/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_title": "Dark Mode for Dribbble."
+  },
+  "web_accessible_resources": [
+    "style/style.css",
+    "style/content.js"
+  ],
+  "homepage_url": "https://www.dribbbbble.com"
+}
