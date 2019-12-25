@@ -1,39 +1,5 @@
 
-
-// var data = {
-//   sideBar: {
-//     layers: ['Layers', '图层'],
-//     assets: ['Assets', '资源'],
-//     file: ['File', '文件'],
-//   },
-//   menu: [
-//     ['Back to Files', '回到文件'],
-//     ['File', '文件'],
-//     ['Edit', '编辑'],
-//     ['View', '视图'],
-//     ['Object', '对象'],
-//     ['Vector', '矢量'],
-//     ['Text', '文本'],
-//     ['Arrange', '范围'],
-//     ['Plugins', '插件'],
-//     ['Integrations', '集成'],
-//     ['Preferences', '设置'],
-//     ['Libraries', '库'],
-//     ['Open in Desktop App', '打开桌面应用'],
-//     ['Help and Account', '帮助和账户'],
-//     {
-//       file: [
-//         ['New', '新建'],
-//         ['New from Sketc Files...', '从 Sketch 文件新建'],
-//         ['Place Image', '替换图片'],
-//         ['Save as .fig...', '另存为 .fig 文件'],
-//         ['Save to Version History', '保存至历史版本'],
-//       ]
-//     }
-//   ],
-// }
-
-var data2 = [
+var data = [
   ['Back to Files', '回到文件'],
   ['File', '文件'],
   ['Edit', '编辑'],
@@ -44,7 +10,7 @@ var data2 = [
   ['Arrange', '范围'],
   ['Plugins', '插件'],
   ['Integrations', '集成'],
-  ['Preferences', '设置'],
+  ['Preferences', '偏好设置'],
   ['Libraries', '库'],
   ['Open in Desktop App', '打开桌面应用'],
   ['Help and Account', '帮助和账户'],
@@ -145,47 +111,105 @@ var data2 = [
   [`Smooth Join Selection`, '平滑连接'],
   [`Delete and Heal Selection`, '删除和修复'],
   //////////// Vector //////////////////
+  [`Bold`, '加粗'],
+  [`Italic`, '斜体'],
+  [`Underline`, '下划线'],
+  [`Strikethrough`, '删除线'],
+  [`Original Case`, '恢复原状'],
+  [`Upper Case`, '大写'],
+  [`Lower Case`, '小写'],
+  [`Increase Font Size`, '增大字号'],
+  [`Decrease Font Size`, '缩小字号'],
+  [`Increase Line Height`, '增加行高'],
+  [`Decrease Line Height`, '减少行高'],
+  [`Increase Letter Spacing`, '增大字间距'],
+  [`Decrease Letter Spacing`, '减少行高'],
+  [`Align`, '对其'],
+  [`Text Align Left`, '文本左对齐'],
+  [`Text Align Center`, '文本居中对齐'],
+  [`Text Align Right`, '文本右对齐'],
+  [`Text Align Justified`, '文本向两侧对其'],
+  [`Text Align Top`, '文本向上对齐'],
+  [`Text Align Middle`, '文本居中对齐'],
+  [`Text Align Bottom`, '文本向下对齐'],
+  //////////// Text //////////////////
+  [`Round to Pixel`, '像素整数化'],
+  [`Align Left`, '左对齐'],
+  [`Align Horizontal Centers`, '水平居中'],
+  [`Align Right`, '右对齐'],
+  [`Align Top`, '顶部对齐'],
+  [`Align Vertical Centers`, '垂直居中'],
+  [`Align Bottom`, '底部对齐'],
+  [`Tidy Up`, '整理'],
+  [`Pack Horizontal`, '水平贴合'],
+  [`Pack Vertical`, '垂直贴合'],
+  [`Distribute Horizontal Spacing`, '水平均分'],
+  [`Distribute Vertical Spacing`, '垂直均分'],
+  [`Distribute Left`, '向左均分'],
+  [`Distribute Horizontal Centers`, '向左均分'],
+  [`Distribute Right`, '向左均分'],
+  [`Distribute Top`, '向左均分'],
+  [`Distribute Vertical`, '向左均分'],
+  [`Distribute Vertical Centers`, '向左均分'],
+  [`Distribute Bottom`, '向左均分'],
+  //////////// Preferences //////////////////
+  [`Snap to Geometry`, '对齐到几何'],
+  [`Snap to Objects`, '对齐到对象'],
+  [`Snap to Pixel Grid`, '对齐到像素'],
+  [`Keep Tool Selected after Use`, '使用后保持工具选择'],
+  [`Highlight Layers on Hover`, '突出显示悬停图层'],
+  [`Rename Duplicated Layers`, '重命名副本图层'],
+  [`Show Dimensions on Objects`, '在对象上显示尺寸'],
+  [`Hide Canvas UI During Changes`, '在更改期间隐藏画布 UI'],
+  [`Keyboard Zooms into Selection`, '键盘控制缩放'],
+  [`Substitute Smart Quotes`, '智能引号替换'],
+  [`Show Google Fonts`, '显示谷歌字体'],
+  [`Flip Objects While Resizing`, '调整大小时翻转对象'],
+  [`Invert Zoom Direction`, '反转缩放方向'],
+  [`Use Number Keys for Opacity`, '使用数字控制透明度'],
+  [`Open Links in Desktop App`, '从桌面应用打开'],
+  [`Nudge Amount...`, '单位微调'],
+  //////////// Help and Account //////////////////
+  [`Help Page`, '帮助页面'],
+  [`Keyboard Shortcuts`, '键盘快捷键'],
+  [`Community Forum`, '论坛'],
+  [`Video Tutorials`, '视频教程'],
+  [`Release Notes`, '版本记录'],
+  [`Open Font Settings`, '打开字体设置'],
+  [`Legal Summary`, '法律文件'],
+  [`Account Settings`, '账号设置'],
+  [`Log Out`, '退出'],
+  //////////// right-click panel //////////////////
+  [`Copy/Paste`, '复制/粘贴'],
+  [`Search...`, '搜索'],
+  [`Select Layer`, '选择图层'],
+  [`Ungroup`, '解组'],
+  [`Flatten`, '扁平'],
+  [`Show/Hide`, '显示/隐藏'],
+  [`Lock/Unlock`, '锁定/解锁'],
 
 
 
 
-              
+
 
 
 ]
-                 
-                    
-     
-// document.querySelector('.fullscreen_view--page--1QuyL').addEventListener(
-//   'DOMSubtreeModified',
-//   () => {
-//     var aElements = document.getElementsByTagName('div');
-//     for (var i = 0; i < aElements.length; i++) {
-//       var j = i
-//       console.log(j)
-//       if (aElements[i].innerHTML === data.menu.file[0][0]) {
-//         aElements[i].innerHTML = data.menu.file[0][1]
-//       }
-//       if (aElements[i].innerHTML === data.menu.file[1][0]) {
-//         aElements[i].innerHTML = data.menu.file[1][1]
-//       }
-//       if (aElements[i].innerHTML === data.menu.file[2][0]) {
-//         aElements[i].innerHTML = data.menu.file[2][1]
-//       }
-//     }
 
-//   },
-//   false
-// )
-
-// var aElements = document.querySelector('.fullscreen_view--page--1QuyL').querySelectorAll('div')[2]
-// var aElements1 = document.querySelector('.fullscreen_view--page--1QuyL')
-
-// console.log(aElements)
-
-// setTimeout(() => {
-//   replaceTextNodes(aElements)
-// }, 6000);
+var actionOptionData = [
+  [`Move`, '移动'],
+  [`Scale`, '缩放'],
+  [`Frame`, '框架'],
+  [`Slice`, '切片'],
+  [`Rectangle`, '矩形'],
+  [`Line`, '线'],
+  [`Arrow`, '箭头'],
+  [`Ellipse`, '椭圆'],
+  [`Polygon`, '多边形'],
+  [`Star`, '星心'],
+  [`Pen`, '钢笔'],
+  [`Pencil`, '铅笔'],
+]
 
 
 document.body.addEventListener(
@@ -193,73 +217,28 @@ document.body.addEventListener(
   () => {
     var aElements = document.querySelector('.dropdown--dropdown--35dH4')
     var menuTitles = document.querySelectorAll('.multilevel_dropdown--name--1abLT')
+    var actionOption = document.querySelectorAll('.action_option--text--3Rze3')
 
     function replaceTextNodes(node) {
       node.forEach(function (el) {
-        for (var i = 0; i < data2.length; i++) {
-          if (el.textContent === data2[i][0]) {
-            el.innerHTML = data2[i][1]
+        for (var i = 0; i < data.length; i++) {
+          if (el.textContent === data[i][0]) {
+            el.innerHTML = data[i][1]
+          }
+        }
+
+        for (var i = 0; i < actionOptionData.length; i++) {
+          if (el.textContent === actionOptionData[i][0]) {
+            el.innerHTML = actionOptionData[i][1]
           }
         }
       })
     }
+
+
+
     replaceTextNodes(menuTitles)
+    replaceTextNodes(actionOption)
   },
   false
 )
-// document.body.addEventListener(
-//   'DOMSubtreeModified',
-//   () => {
-//     // var aElements = document.getElementsByTagName('div');
-//     var aElements = document.querySelector('.dropdown--dropdown--35dH4')
-//     var menuTitles = document.querySelectorAll('.multilevel_dropdown--name--1abLT')
-//     // replaceTextNodes(aElements)
-
-//     function replaceTextNodes(node) {
-//       node.forEach(function (el) {
-//         console.log(el)
-
-//         for (var i = 0; i < data.menu.length; i++) {
-//           if (el.textContent === data.menu[i][0]) {
-//             el.innerHTML = data.menu[i][1]
-//             console.log(i)
-//           }
-//         }
-//         for (var i = 0; i < data.menu[data.menu.length - 1].file.length; i++) {
-//           if (el.textContent === data.menu[data.menu.length - 1].file[i][0]) {
-//             el.innerHTML = data.menu[data.menu.length - 1].file[i][1]
-//             console.log(i)
-//           }
-//         }
-//       })
-//     }
-//     replaceTextNodes(menuTitles)
-//   },
-//   false
-// )
-
-
-
-
-// function replaceTextNodes(node) {
-//   node.childNodes.forEach(function (el, i) {
-//     console.log(el, i)
-
-//     if (el.textContent === data.menu[0][0]) { 
-//       el.nodeValue = data.menu[0][1]
-//     }
-//     if (el.textContent === data.menu[1][0]) { 
-//       el.nodeValue = data.menu[1][1]
-//     }
-//     if (el.textContent === data.menu[2][0]) {
-//       el.nodeValue = data.menu[2][1]
-//     }
-//     if (el.textContent === data.menu[3][0]) { 
-//       el.nodeValue = data.menu[3][1]
-//     }
-//     // }
-//   })
-// }
-
-
-
