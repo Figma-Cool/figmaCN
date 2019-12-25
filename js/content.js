@@ -80,7 +80,7 @@ var data2 = [
   [`Select All with Same Effect`, '选择全部相同效果'],
   [`Select All with Same Text Properties`, '选择全部相同文本属性'],
   [`Select All with Same Font`, '选择全部相同字体'],
-  [`Select All with Same Instance`, '选择全部相同组件'],
+  [`Select All with Same Instance`, '选择全部相同组件实例'],
   //////////// View //////////////////
   [`Pixel Grid`, '像素网格'],
   [`Layout Grids`, '布局网格'],
@@ -92,11 +92,70 @@ var data2 = [
   [`Show/Hide UI`, '显示/隐藏界面'],
   [`Layers Panel`, '图层面板'],
   [`Show Multiplayer Cursors`, '显示多用户鼠标指针'],
+  [`Pixel Preview`, '像素预览'],
+  [`Zoom In`, '放大'],
+  [`Zoom Out`, '缩小'],
+  [`Zoom to 100%`, '缩放至 100%'],
+  [`Zoom to Fit`, '缩放至适合大小'],
+  [`Zoom to Selection`, '缩放至选中范围'],
+  [`Previous Page`, '上一页'],
+  [`Next Page`, '下一页'],
+  [`Zoom to Previous Frame`, '缩放至上一个框架'],
+  [`Zoom to Next Frame`, '缩放至下一个框架'],
+  [`Find Previous Frame`, '查看上一个框架'],
+  [`Find Next Frame`, '查看下一个框架'],
+  //////////// Object //////////////////
+  [`Group Selection`, '选中项成组'],
+  [`Frame Selection`, '选中项框架化'],
+  [`Ungroup Selection`, '取消成组'],
+  [`Use as Mask`, '用作蒙版'],
+  [`Restore Default Thumbnail`, '恢复默认缩略图'],
+  [`Add Auto Layout`, '增加自动布局'],
+  [`Create Component`, '创建组件'],
+  [`Reset Instance`, '重置组件实例'],
+  [`Detach Instance`, '分离组件实例'],
+  [`Master Component`, '主组件'],
+  [`Bring to Front`, '到最前'],
+  [`Bring Forward`, '向前'],
+  [`Send Backward`, '向后'],
+  [`Send to Back`, '到最后'],
+  [`Flip Horizontal`, '水平翻转'],
+  [`Flip Vertical`, '垂直翻转'],
+  [`Rotate 180B0`, '旋转 180°'],
+  ['Rotate 90B0 Left', '向左旋转 90°'],
+  [`Rotate 90° Right`, '向右旋转 90°'],
+  [`Flatten Selection`, '拼合选中项'],
+  [`Outline Stroke`, '描边轮廓化'],
+  [`Boolean Groups`, '布尔组合'],
+  [`Union Selection`, '拼合路径'],
+  [`Subtract Selection`, '减去'],
+  [`Intersect Selection`, '相交'],
+  [`Exclude Selection`, '排除'],
+  [`Exclude Selection`, '排除'],
+  [`Rasterize Selection`, '像素化'],
+  [`Collapse Layers`, '折叠图层'],
+  [`Show/Hide Selection`, '显示/隐藏'],
+  [`Lock/Unlock Selection`, '锁定/解锁'],
+  [`Hide Other Layers`, '隐藏其余图层'],
+  [`Remove Fill`, '移除填充'],
+  [`Remove Stroke`, '移除描边'],
+  [`Swap Fill and Stroke`, '互换填充和描边'],
+  //////////// Vector //////////////////
+  [`Join Selection`, '连接'],
+  [`Smooth Join Selection`, '平滑连接'],
+  [`Delete and Heal Selection`, '删除和修复'],
+  //////////// Vector //////////////////
+
+
+
+
+              
 
 
 ]
-
-                  
+                 
+                    
+     
 // document.querySelector('.fullscreen_view--page--1QuyL').addEventListener(
 //   'DOMSubtreeModified',
 //   () => {
