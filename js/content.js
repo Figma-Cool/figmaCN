@@ -72,7 +72,7 @@ var data = [
   [`Find Next Frame`, '查看下一个框架'],
   //////////// Object //////////////////
   [`Group Selection`, '编组'],
-  [`Frame Selection`, '框架化'],
+  [`Frame Selection`, '添加框架'],
   [`Ungroup Selection`, '取消编组'],
   [`Use as Mask`, '设为蒙版'],
   [`Restore Default Thumbnail`, '恢复默认缩略图'],
@@ -241,9 +241,7 @@ document.body.addEventListener(
     var panelTitle = document.querySelectorAll('div[class*="panelTitle"]')
     var panelTitleText = document.querySelectorAll('div[class*="panelTitleText"]')
     var panelTab = document.querySelectorAll('div[class*="panel--tab"]')
-    // var menuTitles = document.querySelectorAll('.multilevel_dropdown--name--1abLT')
-    // var actionOption = document.querySelectorAll('.action_option--text--3Rze3')
-
+    
     function replaceTextNodes(node) {
       node.forEach(function (el) {
         for (var i = 0; i < data.length; i++) {
@@ -282,13 +280,6 @@ document.body.addEventListener(
     replaceTextNodes(panelTitle)
     replaceTextNodes(panelTab)
     replaceTextNodes(menuTitlesSpan)
-
-    // setTimeout(() => {
-    //   replaceTextNodes(panelTitleText)
-    //   replaceTextNodes(panelTitle)
-    //   replaceTextNodes(panelTab)
-    // }, 6000);
-
     replaceTextNodes(menuTitles)
     replaceTextNodes(actionOption)
   },

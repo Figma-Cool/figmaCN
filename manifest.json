@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "FigmaCN",
   "description": "中文 Figma",
-  "version": "0.1",
+  "version": "0.2",
   "permissions": [
     "https://*.figma.com/*",
     "storage"
