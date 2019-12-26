@@ -81,6 +81,9 @@ var data = [
   [`Reset Instance`, '重置组件实例'],
   [`Detach Instance`, '分离组件实例'],
   [`Master Component`, '主组件'],
+  [`Go to Master Component`, '转到主组件'],
+  [`Push Overrides to Master`, '覆盖主组件'],
+  [`Restore Master Component`, '恢复主组件'],
   [`Bring to Front`, '到最前'],
   [`Bring Forward`, '向前'],
   [`Send Backward`, '向后'],
@@ -186,6 +189,8 @@ var data = [
   [`Show/Hide`, '显示/隐藏'],
   [`Lock/Unlock`, '锁定/解锁'],
   [`Move to Page`, '移到页面'],
+  [`Copy Link`, '复制链接'],
+  [`Set as Thumbnail`, '设置为缩略图'],
 ]
 
 var actionOptionData = [
@@ -215,6 +220,7 @@ var panelTitles = [
   ['Layer', '图层'],
   ['Auto Layout', '自动布局'],
   ['Layout Grid', '布局网格'],
+  ['Instance', '组件实例'],
 ]
 
 var panelTabs = [
@@ -229,8 +235,14 @@ var panelTabs = [
 document.body.addEventListener(
   'DOMSubtreeModified',
   () => {
-    var menuTitles = document.querySelectorAll('.multilevel_dropdown--name--1abLT')
-    var actionOption = document.querySelectorAll('.action_option--text--3Rze3')
+    var menuTitles = document.querySelectorAll('div[class*="multilevel_dropdown--name"]')
+    var menuTitlesSpan = document.querySelectorAll('span[class*="multilevel_dropdown--name"]')
+    var actionOption = document.querySelectorAll('div[class*="action_option--text"]')
+    var panelTitle = document.querySelectorAll('div[class*="panelTitle"]')
+    var panelTitleText = document.querySelectorAll('div[class*="panelTitleText"]')
+    var panelTab = document.querySelectorAll('div[class*="panel--tab"]')
+    // var menuTitles = document.querySelectorAll('.multilevel_dropdown--name--1abLT')
+    // var actionOption = document.querySelectorAll('.action_option--text--3Rze3')
 
     function replaceTextNodes(node) {
       node.forEach(function (el) {
@@ -265,23 +277,23 @@ document.body.addEventListener(
       })
     }
 
-    var panelTitle = document.querySelectorAll('div[class*="panelTitle"]')
-    var panelTitleText = document.querySelectorAll('div[class*="panelTitleText"]')
-    var panelTab = document.querySelectorAll('div[class*="panel--tab"]')
+
     replaceTextNodes(panelTitleText)
     replaceTextNodes(panelTitle)
     replaceTextNodes(panelTab)
+    replaceTextNodes(menuTitlesSpan)
 
-    setTimeout(() => {
-      replaceTextNodes(panelTitleText)
-      replaceTextNodes(panelTitle)
-      replaceTextNodes(panelTab)
-    }, 6000);
+    // setTimeout(() => {
+    //   replaceTextNodes(panelTitleText)
+    //   replaceTextNodes(panelTitle)
+    //   replaceTextNodes(panelTab)
+    // }, 6000);
 
     replaceTextNodes(menuTitles)
     replaceTextNodes(actionOption)
   },
   false
 )
+
 
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "FigmaCN",
-  "description": "Figma 中文插件",
+  "description": "中文 Figma",
   "version": "0.1",
   "permissions": [
     "https://*.figma.com/*",
@@ -26,11 +26,10 @@
     }
   ],
   "browser_action": {
-    "default_title": "Dark Mode for Dribbble."
+    "default_title": "中文 Figma"
   },
   "web_accessible_resources": [
-    "style/style.css",
-    "style/content.js"
+    "js/content.js"
   ],
-  "homepage_url": "https://www.dribbbbble.com"
+  "homepage_url": "https://figma.cool/cn"
 }
