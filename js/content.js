@@ -7,7 +7,7 @@ var data = [
   ['Object', '对象'],
   ['Vector', '矢量'],
   ['Text', '文本'],
-  ['Arrange', '范围'],
+  ['Arrange', '排列'],
   ['Plugins', '插件'],
   ['Integrations', '集成'],
   ['Preferences', '偏好设置'],
@@ -22,7 +22,7 @@ var data = [
   [`Save to Version History...`, '保存至历史版本'],
   ['Show Version History', '查看历史版本'],
   [`Export...`, '导出'],
-  [`Export Frames to PDF...`, '导出框架为PDF'],
+  [`Export Frames to PDF...`, '导出框架为 PDF'],
   //////////// Edit //////////////////
   [`Undo`, '撤销'],
   [`Redo`, '恢复'],
@@ -42,7 +42,7 @@ var data = [
   [`Select Inverse`, '反选'],
   [`Select All with Same Properties`, '选择全部相同属性'],
   [`Select All with Same Fill`, '选择全部相同填充颜色'],
-  [`Select All with Same Stroke`, '选择全部相同描边'],
+  [`Select All with Same Stroke`, '选择全部相同边框'],
   [`Select All with Same Effect`, '选择全部相同效果'],
   [`Select All with Same Text Properties`, '选择全部相同文本属性'],
   [`Select All with Same Font`, '选择全部相同字体'],
@@ -71,10 +71,10 @@ var data = [
   [`Find Previous Frame`, '查看上一个框架'],
   [`Find Next Frame`, '查看下一个框架'],
   //////////// Object //////////////////
-  [`Group Selection`, '选中项成组'],
-  [`Frame Selection`, '选中项框架化'],
-  [`Ungroup Selection`, '取消成组'],
-  [`Use as Mask`, '用作蒙版'],
+  [`Group Selection`, '编组'],
+  [`Frame Selection`, '框架化'],
+  [`Ungroup Selection`, '取消编组'],
+  [`Use as Mask`, '设为蒙版'],
   [`Restore Default Thumbnail`, '恢复默认缩略图'],
   [`Add Auto Layout`, '增加自动布局'],
   [`Create Component`, '创建组件'],
@@ -91,31 +91,30 @@ var data = [
   ['Rotate 90B0 Left', '向左旋转 90°'],
   [`Rotate 90° Right`, '向右旋转 90°'],
   [`Flatten Selection`, '拼合选中项'],
-  [`Outline Stroke`, '描边轮廓化'],
+  [`Outline Stroke`, '边框轮廓化'],
   [`Boolean Groups`, '布尔组合'],
-  [`Union Selection`, '拼合路径'],
-  [`Subtract Selection`, '减去'],
-  [`Intersect Selection`, '相交'],
-  [`Exclude Selection`, '排除'],
-  [`Exclude Selection`, '排除'],
+  [`Union Selection`, '连集'],
+  [`Subtract Selection`, '减去顶层'],
+  [`Intersect Selection`, '交集'],
+  [`Exclude Selection`, '差集'],
   [`Rasterize Selection`, '像素化'],
   [`Collapse Layers`, '折叠图层'],
   [`Show/Hide Selection`, '显示/隐藏'],
   [`Lock/Unlock Selection`, '锁定/解锁'],
   [`Hide Other Layers`, '隐藏其余图层'],
   [`Remove Fill`, '移除填充'],
-  [`Remove Stroke`, '移除描边'],
-  [`Swap Fill and Stroke`, '互换填充和描边'],
+  [`Remove Stroke`, '移除边框'],
+  [`Swap Fill and Stroke`, '互换填充和边框'],
   //////////// Vector //////////////////
   [`Join Selection`, '连接'],
   [`Smooth Join Selection`, '平滑连接'],
   [`Delete and Heal Selection`, '删除和修复'],
-  //////////// Vector //////////////////
+  //////////// Text //////////////////
   [`Bold`, '加粗'],
   [`Italic`, '斜体'],
   [`Underline`, '下划线'],
   [`Strikethrough`, '删除线'],
-  [`Original Case`, '恢复原状'],
+  [`Original Case`, '恢复初始状态'],
   [`Upper Case`, '大写'],
   [`Lower Case`, '小写'],
   [`Increase Font Size`, '增大字号'],
@@ -124,15 +123,15 @@ var data = [
   [`Decrease Line Height`, '减少行高'],
   [`Increase Letter Spacing`, '增大字间距'],
   [`Decrease Letter Spacing`, '减少行高'],
-  [`Align`, '对其'],
-  [`Text Align Left`, '文本左对齐'],
-  [`Text Align Center`, '文本居中对齐'],
-  [`Text Align Right`, '文本右对齐'],
-  [`Text Align Justified`, '文本向两侧对其'],
-  [`Text Align Top`, '文本向上对齐'],
-  [`Text Align Middle`, '文本居中对齐'],
-  [`Text Align Bottom`, '文本向下对齐'],
-  //////////// Text //////////////////
+  [`Align`, '对齐'],
+  [`Text Align Left`, '左对齐'],
+  [`Text Align Center`, '居中对齐'],
+  [`Text Align Right`, '右对齐'],
+  [`Text Align Justified`, '两端对齐'],
+  [`Text Align Top`, '顶层'],
+  [`Text Align Middle`, '居中'],
+  [`Text Align Bottom`, '底部'],
+  //////////// Arrange //////////////////
   [`Round to Pixel`, '像素整数化'],
   [`Align Left`, '左对齐'],
   [`Align Horizontal Centers`, '水平居中'],
@@ -146,12 +145,11 @@ var data = [
   [`Distribute Horizontal Spacing`, '水平均分'],
   [`Distribute Vertical Spacing`, '垂直均分'],
   [`Distribute Left`, '向左均分'],
-  [`Distribute Horizontal Centers`, '向左均分'],
-  [`Distribute Right`, '向左均分'],
-  [`Distribute Top`, '向左均分'],
-  [`Distribute Vertical`, '向左均分'],
-  [`Distribute Vertical Centers`, '向左均分'],
-  [`Distribute Bottom`, '向左均分'],
+  [`Distribute Horizontal Centers`, '向水平中心均分'],
+  [`Distribute Right`, '向右均分'],
+  [`Distribute Top`, '向上均分'],
+  [`Distribute Vertical Centers`, '向垂直中心均分'],
+  [`Distribute Bottom`, '向下均分'],
   //////////// Preferences //////////////////
   [`Snap to Geometry`, '对齐到几何'],
   [`Snap to Objects`, '对齐到对象'],
@@ -187,13 +185,7 @@ var data = [
   [`Flatten`, '扁平'],
   [`Show/Hide`, '显示/隐藏'],
   [`Lock/Unlock`, '锁定/解锁'],
-
-
-
-
-
-
-
+  [`Move to Page`, '移到页面'],
 ]
 
 var actionOptionData = [
@@ -212,10 +204,31 @@ var actionOptionData = [
 ]
 
 
+var panelTitles = [
+  ['Background', '背景'],
+  ['Local Styles', '本地样式'],
+  ['Stroke', '边框'],
+  ['Effects', '效果'],
+  ['Constraints', '约束'],
+  ['Export', '导出'],
+  ['Fill', '填充'],
+  ['Layer', '图层'],
+  ['Auto Layout', '自动布局'],
+  ['Layout Grid', '布局网格'],
+]
+
+var panelTabs = [
+  ['Layers', '图层'],
+  ['Assets', '资源'],
+  ['design', '设计'],
+  ['prototype', '原型'],
+  ['code', '代码'],
+]
+
+
 document.body.addEventListener(
   'DOMSubtreeModified',
   () => {
-    var aElements = document.querySelector('.dropdown--dropdown--35dH4')
     var menuTitles = document.querySelectorAll('.multilevel_dropdown--name--1abLT')
     var actionOption = document.querySelectorAll('.action_option--text--3Rze3')
 
@@ -232,13 +245,43 @@ document.body.addEventListener(
             el.innerHTML = actionOptionData[i][1]
           }
         }
+
+        for (var i = 0; i < panelTitleText.length; i++) {
+          if (el.textContent === panelTitleText[i][0]) {
+            el.textContent = panelTitleText[i][1]
+          }
+        }
+        for (var i = 0; i < panelTitles.length; i++) {
+          if (el.textContent === panelTitles[i][0]) {
+            el.textContent = panelTitles[i][1]
+          }
+        }
+        for (var i = 0; i < panelTabs.length; i++) {
+          if (el.getAttribute('data-label') === panelTabs[i][0]) {
+            el.setAttribute('data-label', panelTabs[i][1])
+            el.textContent = panelTabs[i][1]
+          }
+        }
       })
     }
 
+    var panelTitle = document.querySelectorAll('div[class*="panelTitle"]')
+    var panelTitleText = document.querySelectorAll('div[class*="panelTitleText"]')
+    var panelTab = document.querySelectorAll('div[class*="panel--tab"]')
+    replaceTextNodes(panelTitleText)
+    replaceTextNodes(panelTitle)
+    replaceTextNodes(panelTab)
 
+    setTimeout(() => {
+      replaceTextNodes(panelTitleText)
+      replaceTextNodes(panelTitle)
+      replaceTextNodes(panelTab)
+    }, 6000);
 
     replaceTextNodes(menuTitles)
     replaceTextNodes(actionOption)
   },
   false
 )
+
+
