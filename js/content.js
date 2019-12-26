@@ -191,6 +191,7 @@ var data = [
   [`Move to Page`, '移到页面'],
   [`Copy Link`, '复制链接'],
   [`Set as Thumbnail`, '设置为缩略图'],
+  [`Rename`, '重命名'],
 ]
 
 var actionOptionData = [
