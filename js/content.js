@@ -185,7 +185,7 @@ var data = [
   [`Search...`, '搜索'],
   [`Select Layer`, '选择图层'],
   [`Ungroup`, '解组'],
-  [`Flatten`, '扁平'],
+  [`Flatten`, '拼合'],
   [`Show/Hide`, '显示/隐藏'],
   [`Lock/Unlock`, '锁定/解锁'],
   [`Move to Page`, '移到页面'],
