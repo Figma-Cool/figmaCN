@@ -6,7 +6,8 @@
   "version": "0.3",
   "homepage_url": "https://figma.cool/cn",
   "permissions": [
-    "*://*.figma.com/*"
+    "*://*.figma.com/*",
+    "storage"
   ],
   "icons": {
     "16": "img/icon-16.png",
@@ -24,6 +25,9 @@
       "run_at": "document_end",
       "all_frames": true
     }
+  ],
+  "web_accessible_resources": [
+    "js/content.js"
   ],
   "browser_action": {
     "default_title": "中文 Figma",
