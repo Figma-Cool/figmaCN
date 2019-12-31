@@ -20,14 +20,12 @@
         "*://*.figma.com/*"
       ],
       "js": [
-        "js/content.js"
+        "js/content.js",
+        "js/data.js"
       ],
       "run_at": "document_end",
       "all_frames": true
     }
-  ],
-  "web_accessible_resources": [
-    "js/content.js"
   ],
   "browser_action": {
     "default_title": "中文 Figma",
