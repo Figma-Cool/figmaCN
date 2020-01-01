@@ -7,7 +7,8 @@
   "homepage_url": "https://figma.cool/cn",
   "permissions": [
     "*://*.figma.com/*",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "icons": {
     "16": "img/icon-16.png",
@@ -30,5 +31,9 @@
   "browser_action": {
     "default_title": "中文 Figma",
     "default_icon": "img/icon-128.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
   }
 }
