@@ -1,13 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "中文 Figma",
+  "name": "FigmaCN",
   "short_name": "FigmaCN",
   "description": "中文 Figma 插件，设计师人工翻译校验。",
-  "version": "0.36",
+  "version": "0.37",
   "homepage_url": "https://figma.cool/cn",
-  "permissions": [
-    "tabs"
-  ],
   "icons": {
     "16": "img/icon-16.png",
     "48": "img/icon-48.png",
@@ -27,7 +24,9 @@
     }
   ],
   "background": {
-    "scripts": ["js/background.js"],
+    "scripts": [
+      "js/background.js"
+    ],
     "persistent": false
   }
 }
