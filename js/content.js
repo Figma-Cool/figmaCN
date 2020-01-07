@@ -90,6 +90,18 @@ let MutationObserverConfig = {
   characterData: true
 };
 let observer = new MutationObserver(function (mutations) {
+  mutations.forEach( (mutation) => {
+    console.log(`mutation.type = ${mutation.type}`);
+
+    for (let i = 0; i < mutation.addedNodes.length; i++) {
+      console.log(`${mutation.addedNodes[i].textContent} added`);
+      
+    }
+
+    for (let i = 0;i < mutation.removedNodes.length; i++) {
+      console.log(`${mutation.removedNodes[i].textContent} removed`);
+    }
+  } );
   replaceTextNodes();
 });
 
