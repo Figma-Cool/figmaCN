@@ -90,28 +90,56 @@ let MutationObserverConfig = {
   characterData: true
 };
 let observer = new MutationObserver(function (mutations) {
-  mutations.forEach((mutation) => {
-    console.log(`mutation.type = ${mutation.type}`);
+  mutations.forEach((el) => {
 
-    mutation.addedNodes.forEach(el => {
 
-      console.log(el);
+    function traversal(dom) {
+      var len = dom.length;
+      var d = null;
+      for (var i = 0; i < len; i++) {
+        d = dom[i];
 
-      for (let i = 0; i < mutation.addedNodes.length; i++) {
-        if (el.textContent === data[i][0]) {
-          el.textContent = data[i][1]
+        if (d.childNodes) {
+          traversal(d.childNodes)
+
+          if (d.nodeType === 3) {
+
+            if (d.textContent === data[i][0]) {
+              d.textContent = data[i][1]
+              console.log(d)
+            }
+
+          }
         }
+
       }
-
-
-    })
-
-
-
-    for (let i = 0; i < mutation.removedNodes.length; i++) {
-      console.log(`${mutation.removedNodes[i].textContent} removed`);
     }
-  });
+
+    traversal(el.target.childNodes)
+
+  })
+  // mutations.forEach((mutation) => {
+  //   console.log(`mutation.type = ${mutation.type}`);
+
+  //   mutation.addedNodes.forEach(el => {
+
+  //     console.log(el);
+
+  //     for (let i = 0; i < mutation.addedNodes.length; i++) {
+  //       if (el.textContent === data[i][0]) {
+  //         el.textContent = data[i][1]
+  //       }
+  //     }
+
+
+  //   })
+
+
+
+  //   for (let i = 0; i < mutation.removedNodes.length; i++) {
+  //     console.log(`${mutation.removedNodes[i].textContent} removed`);
+  //   }
+  // });
   // replaceTextNodes();
 });
 
