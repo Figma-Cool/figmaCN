@@ -221,6 +221,7 @@ var panelTitles = [
   ['Auto Layout', '自动布局'],
   ['Layout Grid', '布局网格'],
   ['Instance', '组件实例'],
+  ['Letter case', '组件实例'],
 ]
 
 var panelTabs = [
@@ -330,6 +331,11 @@ var allLabelData = [
   [`Margin`, '边距'],
   [`Gutter`, '间距'],
   [`Offset`, '偏置'],
+  //////////// Type Details //////////////////
+  [`Resizing`, '宽度调整'],
+  [`Alignment`, '对齐'],
+  [`Decoration`, '文本修饰'],
+  [`Decoration`, '文本修饰'],
 ]
 
 var spanSidebarToolbarData = [
