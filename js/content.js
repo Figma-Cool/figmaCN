@@ -20,9 +20,9 @@ function replaceTextNodes() {
 
   allSelectedDOM.forEach(els => {
     els.forEach(el => {
-      for (let i = 0; i < data.length; i++) {
-        if (el.textContent === data[i][0]) {
-          el.innerHTML = data[i][1]
+      for (let i = 0; i < allData.length; i++) {
+        if (el.textContent === allData[i][0]) {
+          el.innerHTML = allData[i][1]
         }
       }
 

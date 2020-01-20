@@ -1,4 +1,4 @@
-var data = [
+const allData = [
   ['Back to Files', '回到文件'],
   ['File', '文件'],
   ['Edit', '编辑'],
@@ -31,7 +31,7 @@ var data = [
   [`Copy as SVG`, '复制为 SVG'],
   [`Paste Over Selection`, '粘贴至选中位置'],
   [`Duplicate`, '复制为副本'],
-  [`Delete`, '删除'],
+  [`Deconste`, '删除'],
   [`Set Default Properties`, '设置默认属性'],
   [`Copy Properties`, '复制属性'],
   [`Paste Properties`, '粘贴属性'],
@@ -110,7 +110,7 @@ var data = [
   //////////// Vector //////////////////
   [`Join Selection`, '连接'],
   [`Smooth Join Selection`, '平滑连接'],
-  [`Delete and Heal Selection`, '删除和修复'],
+  [`Deconste and Heal Selection`, '删除和修复'],
   //////////// Text //////////////////
   [`Bold`, '加粗'],
   [`Italic`, '斜体'],
@@ -123,8 +123,8 @@ var data = [
   [`Decrease Font Size`, '缩小字号'],
   [`Increase Line Height`, '增加行高'],
   [`Decrease Line Height`, '减少行高'],
-  [`Increase Letter Spacing`, '增大字间距'],
-  [`Decrease Letter Spacing`, '减少行高'],
+  [`Increase constter Spacing`, '增大字间距'],
+  [`Decrease constter Spacing`, '减少行高'],
   [`Align`, '对齐'],
   [`Text Align Left`, '左对齐'],
   [`Text Align Center`, '居中对齐'],
@@ -193,7 +193,7 @@ var data = [
   [`Rename`, '重命名'],
 ]
 
-var actionOptionData = [
+const actionOptionData = [
   [`Move`, '移动'],
   [`Scale`, '缩放'],
   [`Frame`, '框架'],
@@ -209,7 +209,7 @@ var actionOptionData = [
 ]
 
 
-var panelTitles = [
+const panelTitles = [
   ['Background', '背景'],
   ['Local Styles', '本地样式'],
   ['Stroke', '边框'],
@@ -221,10 +221,10 @@ var panelTitles = [
   ['Auto Layout', '自动布局'],
   ['Layout Grid', '布局网格'],
   ['Instance', '组件实例'],
-  ['Letter case', '组件实例'],
+  ['constter case', '组件实例'],
 ]
 
-var panelTabs = [
+const panelTabs = [
   ['Layers', '图层'],
   ['Assets', '资源'],
   ['design', '设计'],
@@ -232,7 +232,7 @@ var panelTabs = [
   ['code', '代码'],
 ]
 
-var selectOptionTextData = [
+const selectOptionTextData = [
   //////////// Overlay mode //////////////////
   ['Pass Through', '穿透'],
   ['Normal', '正常'],
@@ -295,14 +295,14 @@ var selectOptionTextData = [
 
 ]
 
-var checkboxLabelData = [
+const checkboxLabelData = [
   ['Fix position when scrolling', '滚动时保持固定'],
   ['Clip content', '剪切内容'],
   ['Contents Only', '仅内容'],
   ['Show in exports', '在导出中显示'],
 ]
 
-var toolBarDropDownData = [
+const toolBarDropDownData = [
   ['Publish Styles & Components', '发布样式和组件'],
   [`Move to Project...`, '移动到项目...'],
   [`Show in Files`, '在文件中显示'],
@@ -315,13 +315,13 @@ var toolBarDropDownData = [
   // [`can view`, '可以浏览'],
 ]
 
-var inputPlaceholderData = [
+const inputPlaceholderData = [
   [`Invite someone...`, '邀请某人'],
   [`Suffix`, '后缀'],
   [`Search`, '搜索'],
 ]
 
-var allLabelData = [
+const allLabelData = [
   [`Size`, '尺寸'],
   [`Color`, '颜色'],
   [`Count`, '数量'],
@@ -338,12 +338,12 @@ var allLabelData = [
   [`Decoration`, '文本修饰'],
 ]
 
-var spanSidebarToolbarData = [
+const spanSidebarToolbarData = [
   [`Recent`, '最近'],
   [`Plugins`, '插件'],
   [`Drafts`, '草稿'],
   [`Recently viewed`, '最近浏览'],
-  [`Deleted`, '已删除'],
+  [`Deconsted`, '已删除'],
   [`Add a project to your favorites to see it here.`, '将项目添加到收藏夹以在此处显示。'],
   [`New Team...`, '新团队...'],
 ]
