@@ -203,7 +203,7 @@ const actionOptionData = [
   [`Arrow`, '箭头'],
   [`Ellipse`, '椭圆'],
   [`Polygon`, '多边形'],
-  [`Star`, '星心'],
+  [`Star`, '星形'],
   [`Pen`, '钢笔'],
   [`Pencil`, '铅笔'],
 ]
