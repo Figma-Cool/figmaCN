@@ -191,9 +191,9 @@ const allData = [
   [`Copy Link`, '复制链接'],
   [`Set as Thumbnail`, '设置为缩略图'],
   [`Rename`, '重命名'],
-]
 
-const actionOptionData = [
+
+
   [`Move`, '移动'],
   [`Scale`, '缩放'],
   [`Frame`, '框架'],
@@ -206,10 +206,10 @@ const actionOptionData = [
   [`Star`, '星形'],
   [`Pen`, '钢笔'],
   [`Pencil`, '铅笔'],
-]
 
 
-const panelTitles = [
+
+
   ['Background', '背景'],
   ['Local Styles', '本地样式'],
   ['Stroke', '边框'],
@@ -222,17 +222,17 @@ const panelTitles = [
   ['Layout Grid', '布局网格'],
   ['Instance', '组件实例'],
   ['constter case', '组件实例'],
-]
 
-const panelTabs = [
+
+
   ['Layers', '图层'],
   ['Assets', '资源'],
   ['design', '设计'],
   ['prototype', '原型'],
   ['code', '代码'],
-]
 
-const selectOptionTextData = [
+
+
   //////////// Overlay mode //////////////////
   ['Pass Through', '穿透'],
   ['Normal', '正常'],
@@ -293,16 +293,14 @@ const selectOptionTextData = [
   ['Rows', '行'],
   ['Stretch', '伸展'],
 
-]
 
-const checkboxLabelData = [
+
+
   ['Fix position when scrolling', '滚动时保持固定'],
   ['Clip content', '剪切内容'],
   ['Contents Only', '仅内容'],
   ['Show in exports', '在导出中显示'],
-]
 
-const toolBarDropDownData = [
   ['Publish Styles & Components', '发布样式和组件'],
   [`Move to Project...`, '移动到项目...'],
   [`Show in Files`, '在文件中显示'],
@@ -313,15 +311,15 @@ const toolBarDropDownData = [
   [`Remove from Recent`, '从最近中移除'],
   // [`can edit`, '可以编辑'],
   // [`can view`, '可以浏览'],
-]
 
-const inputPlaceholderData = [
+
+
   [`Invite someone...`, '邀请某人'],
   [`Suffix`, '后缀'],
   [`Search`, '搜索'],
-]
 
-const allLabelData = [
+
+
   [`Size`, '尺寸'],
   [`Color`, '颜色'],
   [`Count`, '数量'],
@@ -336,9 +334,7 @@ const allLabelData = [
   [`Alignment`, '对齐'],
   [`Decoration`, '文本修饰'],
   [`Decoration`, '文本修饰'],
-]
 
-const spanSidebarToolbarData = [
   [`Recent`, '最近'],
   [`Plugins`, '插件'],
   [`Drafts`, '草稿'],
