@@ -30,7 +30,6 @@
     "persistent": false
   },
   "permissions": [
-    "tabs",
     "*://*.figma.com/*"
   ]
 }
