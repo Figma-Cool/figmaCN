@@ -350,6 +350,7 @@ const allData = [
   ////////share////////
   [`Share `, `分享`],
   [`Send Invite `, `发送邀请`],
+  [`Send Invite`, `发送邀请`],
   [`can view`, `浏览者`],
   [`can edit`, `编辑者`],
   [`owner`, `所有者`],
@@ -519,6 +520,11 @@ const allData = [
   [`People`, `人员`],
   [`Relevance`, `相关`],
   [`New Team...`, `新建团队...`],
+  [`Selection Colors`, `颜色选择`],
+  [`Component`, `组件`],
+  [`Mask`, `蒙版`],
+  [`Use Shape Outlines`, `使用形状轮廓`],
+  [`Browse libraries...`, `使用库...`],
 
   [`Featured Plugins`, `精选插件`],
   [`Browse all plugins`, `浏览所有插件`],
