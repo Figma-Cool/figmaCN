@@ -28,6 +28,6 @@
     ]
   },
   "permissions": [
-    "<all_urls>"
+    "https://*.aliyuncs.com/content.js"
   ]
 }
