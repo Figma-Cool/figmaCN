@@ -3,7 +3,7 @@
   "name": "FigmaCN",
   "short_name": "FigmaCN",
   "description": "中文 Figma 插件，设计师人工翻译校验。",
-  "version": "0.60",
+  "version": "0.61",
   "homepage_url": "https://figma.cool",
   "icons": {
     "16": "img/icon-16.png",
@@ -26,7 +26,6 @@
   "background": {
     "scripts": [
       "js/background.js"
-    ],
-    "persistent": false
+    ]
   }
 }
