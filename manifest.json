@@ -28,8 +28,5 @@
       "js/background.js"
     ],
     "persistent": false
-  },
-  "permissions": [
-    "*://*.figma.com/*"
-  ]
+  }
 }
