@@ -217,7 +217,7 @@ const allData = [
   [`Auto Layout`, `自动布局`],
   [`Layout Grid`, `布局网格`],
   [`Instance`, `组件实例`],
-  [`constter case`, `组件实例`],
+  // [`constter case`, `组件实例`],
 
   [`Layers`, `图层`],
   [`Assets`, `资源`],
