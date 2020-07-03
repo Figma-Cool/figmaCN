@@ -677,5 +677,27 @@ const allData = [
   [`Replace Fonts`, `替换字体`],
   [`Family`, `家族`],
   [`Plugin`, `插件`],
+  //////////// Templates /////////////
+  [`All Templates`, `所有模板`],
+  [`Team Templates`, `团队模板`],
+  [`Blank Presets`, `空白预设`],
+  [`Create File`, `创建文件`],
+  [`Blank Canvas`, `空白画布`],
+  [`Desktop`, `桌面版`],
+
+  [`Brainstorms and Sprints`, `头脑风暴和冲刺`],
+  [`Planning and Retros`, `规划和回溯`],
+  [`Fun Activities`, `趣味活动`],
+  [`Simple Kanban Template`, `简易看板模板`],
+  [`Meeting notes`, `会议记录`],
+  [`Remote Design Sprinting (RDS)`, `远程设计冲刺（RDS）`],
+  [`Team Brainstorm Template`, `团队头脑风暴模板`],
+  [`Whiteboards and Stickies`, `白板和贴纸`],
+  [`Figma Multiplayer Dice Games!`, `Figma 多人骰子游戏！`],
+  [`Figma Catan (Playable)`, `Figma Catan (可玩)`],
+
+  [`Team Retrospective Template`, `团队回顾模板`],
+  [`Create file in Drafts`, `在草稿中创建文件`],
+  [` Don't show this again`, `不再显示`],
 
 ]
