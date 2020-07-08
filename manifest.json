@@ -26,8 +26,5 @@
     "scripts": [
       "js/background.js"
     ]
-  },
-  "permissions": [
-    "https://*.aliyuncs.com/content.js"
-  ]
+  }
 }
