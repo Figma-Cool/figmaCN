@@ -322,6 +322,7 @@ const allData = [
   [`Free for students and educators`, `学生和教育工作者免费`],
   [`Free`, `免费`],
   [`Fun Activities`, `趣味活动`],
+  [`Get Desktop App`, `下载桌面版 App`],
   [`Get Help`, `获取帮助`],
   [`Go to Master Component`, `转到主组件`],
   [`Gold`, `金色`],
