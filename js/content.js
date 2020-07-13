@@ -362,7 +362,7 @@ const allData = [
   [`Hue`, `色相`],
   [`If you are an admin of a Starter Team, you can upgrade it to an Education Team. Just choose the "Education Plan” when upgrading your team.`, `如果你是入门版团队的管理员，你可以将其升级为教育团队。只要在升级团队时选择 "教育计划 "即可。`],
   [`Ignore Constraints (Frames Only)`, `忽略约束（仅画框）`],
-  [`Image`, `图像`],
+  [`Image`, `图片`],
   [`Import`, `导入`],
   [`Inactive`, `不活跃`],
   [`Increase Font Size`, `增大字号`],
