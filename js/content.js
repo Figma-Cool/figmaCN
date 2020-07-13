@@ -35,6 +35,7 @@ const allData = [
   [`Add your collaborators`, `添加协作者`],
   [`Add/Show Comments`, `添加/显示评论`],
   [`Adjust Font Size`, `调整字体大小`],
+  [`Adjust Font Weight`, `调整字体粗细`],
   [`Adjust Letter Spacing`, `调整字符间距`],
   [`Adjust Line Height`, `调整行间距`],
   [`Admin Dashboard`, `管理员仪表盘`],
