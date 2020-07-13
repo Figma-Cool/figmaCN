@@ -555,6 +555,7 @@ const allData = [
   [`Position`, `位置`],
   [`Preferences`, `偏好设置`],
   [`Present`, `演示`],
+  [`Preserve scroll position`, `滚动时保持固定`],
   [`Press it now to quickly hide the panes and focus on your work`, `现在按下它可以快速隐藏面板，专注于你的工作`],
   [`Preview`, `预览`],
   [`Previous Page`, `上一页`],
