@@ -303,7 +303,7 @@ const allData = [
   [`Export…`, `导出…`],
   [`Export`, `导出`],
   [`Exposure`, `曝光`],
-  [`Family`, `家族`],
+  [`Family`, `字体`],
   [`Favorite`, `收藏`],
   [`Featured Plugins`, `精选插件`],
   [`Features`, `功能`],
