@@ -555,6 +555,7 @@ const allData = [
   [`Pan`, `抓手`],
   [`Panels`, `面板`],
   [`Paragraph Indent`, `段落缩进`],
+  [`Paragraph Spacing`, `段落间距`],
   [`Pass Through`, `穿透`],
   [`Password`, `密码`],
   [`Paste and Match Style`, `粘贴并匹配样式`],
