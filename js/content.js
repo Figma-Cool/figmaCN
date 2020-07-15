@@ -811,6 +811,7 @@ const allData = [
   [`The document has unsaved changes. Reconnecting...`, `该文档有未保存的更改。重新连接中…`],
   [`The following apps have been given permission to access your Figma files on your behalf. If you see any apps you're not expecting here, remove their permissions below.`, `以下应用程序已被授予代表你访问 Figma 文件的权限。如果你在这里看到任何你不希望看到的应用程序，请在下面删除其权限。`],
   [`The following fonts are not available, and need to be replaced in order to edit text.`, `以下字体不可用，需要被替换才能编辑文本。`],
+  [`There are no published styles in your drafts.`, `你的草稿中没有已发布的样式。`],
   [`This file`, `当前文件`],
   [`This is a Figma Community resource file.`, `这是一个 Figma 社区源文件。`],
   [`This is the Figma Community.`, `这是 Figma 社区。`],
