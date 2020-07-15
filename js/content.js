@@ -513,6 +513,7 @@ const allData = [
   [`No updates available`, `无可用更新`],
   [`None`, `无`],
   [`Normal`, `正常`],
+  [`Nothing liked yet`, `没有喜欢任何内容`],
   [`Nothing published yet`, `没有发布任何内容`],
   [`Notifications`, `通知`],
   [`Nudge Amount…`, `单位微调…`],
