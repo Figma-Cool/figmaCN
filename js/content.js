@@ -1,7 +1,6 @@
 const allData = [
   [` autosave `, ` 个自动保存 `],
   [` Copy link`, `复制链接`],
-  [` Don't show this again`, `不再显示`],
   [` for all team files.`, `给所有团队文件`],
   [` Get embed code`, `获取嵌入代码`],
   [` Learn more`, ` 了解更多`],
@@ -251,6 +250,7 @@ const allData = [
   [`Distribute Vertical Centers`, `向垂直中心均分`],
   [`Distribute Vertical Spacing`, `垂直均分`],
   [`Document Colors`, `文件中的颜色`],
+  [`Don't show this again`, `不再显示`],
   [`Downgrade to Viewer`, `降级为查看者`],
   [`Download the latest Desktop App`, `下载最新的客户端`],
   [`Download uninstaller to disable local fonts.`, `下载卸载工具来禁用本地字体。`],
