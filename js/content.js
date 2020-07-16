@@ -920,6 +920,7 @@ const allData = [
   [`You can now edit files in any Education Team.`, `你可以在任何一个教育版团队编辑文件。`],
   [`You can update user permissions on the team page after setting up.`, `设置好后可以在团队页面更新用户权限。`],
   [`You can't undo this action.`, `此操作不可撤销。`],
+  [`You don't have any deleted files.`, `没有被删除的文件。`],
   [`You don't have any notifications.`, `暂无消息通知。`],
   [`You don't have permission to remove files from this project.`, `你没有权限从这个项目中移除这个文件。`],
   [`You`, `你`],
