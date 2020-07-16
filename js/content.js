@@ -7,7 +7,7 @@ const allData = [
   [` Projects`, ` 项目`],
   [` Sign up`, `注册`],
   [` Team Libraries`, ` 团队资源库`],
-  [` to create your own plugin.`, `创建你自己的插件`],
+  [` to create your own plugin.`, ` 创建你自己的插件`],
   [` Version History`, ` 版本历史`],
   [` Viewers`, `查看者`],
   [` when you choose the Annual Plan.`, ` 当你选择年付计划时。`],
