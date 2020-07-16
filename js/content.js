@@ -832,6 +832,7 @@ const allData = [
   [`This is a Figma Community profile.`, `这是 Figma 社区的个人主页。`],
   [`This is a Figma Community resource file.`, `这是一个 Figma 社区源文件。`],
   [`This is the Figma Community.`, `这是 Figma 社区。`],
+  [`This person can still edit, because the file is set to allow editing by anybody with the link.`, `这个人仍然可以编辑，因为文件被设置为任何有链接的人都可以编辑。`],
   [`This project doesn't have any files.`, `这个项目没有任何文件。`],
   [`This team is for Education users only. New users will be required to verify their Education Status.`, `这个团队只针对教育用户。新用户需要验证其教育状态。`],
   [`Tidy Up`, `整理`],
