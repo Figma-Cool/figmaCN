@@ -317,6 +317,7 @@ const allData = [
   [`Figma Multiplayer Dice Games!`, `Figma 多人骰子游戏！`],
   [`Figma Organization`, `Figma 组织`],
   [`File Contributions`, `文件贡献`],
+  [`File deleted forever`, `文件已永久删除`],
   [`File deleted`, `文件已删除`],
   [`File duplicated to your drafts`, `文件已创建副本到你的草稿`],
   [`File duplicated to your Drafts`, `文件已创建副本到你的草稿`],
