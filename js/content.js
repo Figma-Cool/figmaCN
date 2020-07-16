@@ -913,6 +913,7 @@ const allData = [
   [`You can update user permissions on the team page after setting up.`, `设置好后可以在团队页面更新用户权限。`],
   [`You can't undo this action.`, `此操作不可撤销。`],
   [`You don't have any notifications.`, `暂无消息通知。`],
+  [`You don't have permission to remove files from this project.`, `你没有权限从这个项目中移除这个文件。`],
   [`You`, `你`],
   [`Your Teams and favorited Projects will appear here`, `你的团队和收藏的项目将出现在这里`],
   [`Zoom In`, `放大`],
