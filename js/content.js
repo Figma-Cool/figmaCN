@@ -922,6 +922,7 @@ const allData = [
   [`You can't undo this action.`, `此操作不可撤销。`],
   [`You don't have any deleted files.`, `没有被删除的文件。`],
   [`You don't have any notifications.`, `暂无消息通知。`],
+  [`You don't have any plugins installed`, `没有已安装的插件`],
   [`You don't have permission to remove files from this project.`, `你没有权限从这个项目中移除这个文件。`],
   [`You`, `你`],
   [`Your Teams and favorited Projects will appear here`, `你的团队和收藏的项目将出现在这里`],
