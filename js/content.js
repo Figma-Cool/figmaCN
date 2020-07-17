@@ -856,6 +856,7 @@ const allData = [
   [`Team Brainstorm Template`, `团队头脑风暴模板`],
   [`Team Library`, `团队资源库`],
   [`Team name`, `团队名称`],
+  [`Team Profile Handle`, `团队主页地址`],
   [`Team Retrospective Template`, `团队回顾模板`],
   [`Team Templates`, `团队模板`],
   [`Teams`, `团队`],
