@@ -362,6 +362,7 @@ const allData = [
   [`Flip Horizontal`, `水平翻转`],
   [`Flip Objects While Resizing`, `调整大小时翻转对象`],
   [`Flip Vertical`, `垂直翻转`],
+  [`Follow`, `关注`],
   [`Followers`, ` 关注者`],
   [`Following`, `正在关注`],
   [`Fonts`, `字体`],
