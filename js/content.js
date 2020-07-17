@@ -905,7 +905,7 @@ const allData = [
   [`Triangle Arrow`, `三角箭头`],
   [`Try now`, `立即重试`],
   [`Type Details`, `字体详情`],
-  [`Type something to start searching...`, `输入后开始搜索...`],
+  [`Type something to start searching...`, `输入一些东西开始搜索…`],
   [`Type`, `类型`],
   [`Uh oh... we can't open that file`, `抱歉… 我们打不开那个文件`],
   [`UI Design`, `UI 设计`],
