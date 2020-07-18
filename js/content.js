@@ -547,6 +547,7 @@ const allData = [
   [`New`, `新建`],
   [`Next Page`, `下一页`],
   [`No files yet`, `还没有文件`],
+  [`No results found`, `没有找到结果`],
   [`No Scrolling`, `无滚动`],
   [`No selected layers have export settings. Click + in the export section of the properties panel to add one.`, `选中的图层都没有设置导出。在属性面板的导出部分点击 + 来添加一个。`],
   [`No updates available`, `无可用更新`],
