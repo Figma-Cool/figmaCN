@@ -75,6 +75,7 @@ const allData = [
   [`Allow Figma to access your local fonts`, `允许 Figma 访问你的本地字体`],
   [`Allow viewers to copy, share, and export from this file`, `允许查看者复制、分享以及从这个文件中导出`],
   [`Alphabetical`, `字母顺序`],
+  [`An error occurred while opening the editor`, `打开编辑器时遇到点问题`],
   [`Angular`, `角度渐变`],
   [`Animation`, `动画`],
   [`Annual billing only`, `仅限年付订单`],
