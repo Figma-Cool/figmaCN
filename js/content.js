@@ -413,7 +413,7 @@ const allData = [
   [`Hide Version History`, `退出历史版本`],
   [`Highlight Layers on Hover`, `突出显示悬停图层`],
   [`Highlights`, `高光`],
-  [`Horizontal & Vertical Scrolling`, `水平垂直滚动`],
+  [`Horizontal & Vertical Scrolling`, `水平 & 垂直滚动`],
   [`Horizontal Padding`, `水平间距`],
   [`Horizontal Scrolling`, `水平滚动`],
   [`Horizontal spacing`, `水平间距`],
