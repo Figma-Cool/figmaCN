@@ -963,7 +963,7 @@ const allData = [
   [`View Community page`, `查看社区页面`],
   [`View page`, `查看页面`],
   [`View Profile`, `查看个人主页`],
-  [`View`, `视图`],
+  [`View`, `查看`],
   [`Viewer permission changed`, `查看者权限已修改`],
   [`Welcome to Figma Community!`, `欢迎来到 Figma 社区！`],
   [`What’s New`, `新功能`],
