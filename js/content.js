@@ -954,7 +954,7 @@ const allData = [
   [`Upgrade Plan`, `升级计划`],
   [`Upgrade team`, `升级团队`],
   [`Upgrade this team to publish components to the Team Library and use them across all files.`, `升级团队，就可以将组件发布到团队资源库，且跨文件使用。`],
-  [`Upgrade to collaborate and share design libraries with your entire team.`, `升级以与你的团队进行协作并共享设计资源库。`],
+  [`Upgrade to collaborate and share Design Libraries with your entire team.`, `升级以与你的团队进行协作并共享设计资源库。`],
   [`Upgrade to collaborate with more teammates`, `升级后可与更多队友合作`],
   [`Upgrade to Professional`, `升级到专业版`],
   [`Upgrade your plan to take full advantage of Figma. `, `升级你的计划以便获取 Figma 全部功能。`],
