@@ -508,7 +508,7 @@ const allData = [
   [`Lower Case`, `小写`],
   [`Luminosity`, `明度`],
   [`Main Component`, `组件母版`],
-  [`Manage Plugins...`, `管理插件…`],
+  [`Manage Plugins…`, `管理插件…`],
   [`Manage Slack Notifications`, `管理 Slack 通知`],
   [`Manual`, `手动`],
   [`Margin`, `边距`],
