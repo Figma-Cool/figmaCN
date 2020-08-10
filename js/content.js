@@ -330,6 +330,7 @@ const allData = [
   [`Delete Forever`, `永久删除`],
   [`Delete forever`, `永久删除`],
   [`Delete Page`, `删除页面`],
+  [`Delete project`, `删除项目`],
   [`Delete Style`, `删除样式`],
   [`Delete Team`, `删除团队`],
   [`Delete your profile`, `删除你的个人主页`],
