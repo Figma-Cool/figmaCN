@@ -705,6 +705,7 @@ const allData = [
   [`One of the coolest things about Figma is that you don’t have to start from scratch to get to work.`, `Figma 最酷的一点是，你不必从头开始工作。`],
   [`Only members of Professional Teams can publish components to a shared library. Create a new team or join an existing team to use this feature.`, `只有专业团队的成员才能将组件发布到共享库中。创建一个新的团队或加入一个现有的团队来使用此功能。`],
   [`Only people invited to this file`, `只有被邀请的人`],
+  [`Only team admins can enable libraries for the team.`, `只有团队管理员才能为团队启用资源库。`],
   [`Only yours `, `仅我的`],
   [`Only yours`, `仅我的`],
   [`Open Admin Dashboard`, `打开管理员仪表盘`],
