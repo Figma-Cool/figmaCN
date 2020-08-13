@@ -645,7 +645,7 @@ const allData = [
   [`Meeting notes`, `会议记录`],
   [`Members`, `成员`],
   [`Midnight Green`, `午夜绿`],
-  [`Mirror Andle and Length`, `角度与长度对称`],
+  [`Mirror Angle and Length`, `角度与长度对称`],
   [`Mirror Angle`, `角度对称`],
   [`Missing Fonts`, `找不到字体`],
   [`Miter Angle`, `斜度`],
