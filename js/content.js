@@ -587,6 +587,7 @@ const allData = [
   [`Last modified`, `最后修改`],
   [`last month`, `上个月`],
   [`Last updated `, `更新日期：`],
+  [`Last updated`, `最近更新`],
   [`Last viewed`, `最近浏览`],
   [`last year`, `去年`],
   [`Layer Blur`, `图层模糊`],
