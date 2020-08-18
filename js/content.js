@@ -785,6 +785,7 @@ const allData = [
   [`Plugin`, `插件`],
   [`Plugins`, `插件`],
   [`Polygon`, `多边形`],
+  [`Popular`, `流行`],
   [`Portrait`, `竖屏`],
   [`Position`, `位置`],
   [`Post`, `确定`],
