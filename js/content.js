@@ -1218,6 +1218,7 @@ let MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 let MutationObserverConfig = {
   childList: true,
   subtree: true,
+  attributeFilter: ['data-label'],
   characterData: true
 };
 
@@ -1228,25 +1229,19 @@ let observer = new MutationObserver(function (mutations) {
     { acceptNode: function (node) { return NodeFilter.FILTER_ACCEPT; } },
     false
   );
-
-  let nodeList = [];
+  let dataMap = new Map();
+  allData.forEach(([key, val]) => {
+    if (key && !dataMap.has(key)) {
+      dataMap.set(key, val);
+    }
+  });
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-    nodeList.push(currentNode);
+    let key1 = currentNode.textContent;
+    let key2 = currentNode.parentNode.getAttribute('data-label');
 
-    // console.log(currentNode.textContent)
-    allData.forEach(item => {
-      if (currentNode.textContent === item[0]) {
-        currentNode.textContent = item[1]
-      }
-
-      if (currentNode.parentNode.getAttribute('data-label') == item[0]) {
-        currentNode.parentNode.setAttribute('data-label', item[1])
-      }
-      // if (currentNode.parentNode.placeholder == item[0]) {
-      //   currentNode.parentNode.placeholder = item[1]
-      // }
-    })
+    if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+    if (dataMap.has(key2)) currentNode.parentNode.setAttribute('data-label', dataMap.get(key1));
 
     currentNode = treeWalker.nextNode();
   }
