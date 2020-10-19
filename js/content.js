@@ -451,6 +451,7 @@ const allData = [
   [`Export Settings`, `导出设置`],
   [`Export your designs for use in production or to share with your team.`, `导出你的设计，以便在生产中使用或与你的团队分享。`],
   [`Export…`, `导出…`],
+  [`export`, `导出`],
   [`Export`, `导出`],
   [`Exposure`, `曝光`],
   [`Family`, `字体`],
