@@ -1037,7 +1037,7 @@ const allData = [
   [`Smart Animate matching layers`, `智能动画匹配图层`],
   [`Smart Animate`, `智能动画`],
   [`Smooth Join Selection`, `平滑连接所选项`],
-  [`Snap to Geometry`, `对齐到几何`],
+  [`Snap to Geometry`, `对齐到形状`],
   [`Snap to Objects`, `对齐到对象`],
   [`Snap to Pixel Grid`, `对齐到像素`],
   [`Soft Light`, `柔光`],
