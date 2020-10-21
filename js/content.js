@@ -223,6 +223,7 @@ const allData = [
   [`Choose a plan`, `选择一个计划`],
   [`Choose Education`, `选择教育版`],
   [`Choose Image...`, `选择图片…`],
+  [`Choose Image…`, `选择图片…`],
   [`Choose Organization`, `选择团队版`],
   [`Choose Professional`, `选择专业版`],
   [`Choose Starter`, `选择入门版`],
