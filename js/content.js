@@ -925,6 +925,7 @@ const allData = [
   [`Restore Default Thumbnail`, `恢复默认封面`],
   [`Restore Main Component`, `恢复组件母版`],
   [`Restore`, `恢复`],
+  [`Restored main component`, `已恢复组件母版`],
   [`Return to instance`, `返回实例`],
   [`Revoke access`, `撤销访问`],
   [`right-click`, `右击`],
