@@ -310,6 +310,7 @@ const allData = [
   [`Created by `, `创建自 `],
   [`Created`, `创建时间`],
   [`Creating a connection`, `创建新的连接`],
+  [`Creator`, `创作者`],
   [`Creators`, `创作者`],
   [`Crop Image`, `裁剪图片`],
   [`Crop`, `裁切`],
