@@ -166,6 +166,7 @@ const allData = [
   [`Assets`, `资源`],
   [`Author`, `作者`],
   [`Auto Height`, `自动高度`],
+  [`Auto layout added`, `已添加自动布局`],
   [`Auto Layout`, `自动布局`],
   [`Auto Width`, `自动宽度`],
   [`Auto`, `自动`],
