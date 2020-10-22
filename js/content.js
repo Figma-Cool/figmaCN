@@ -920,6 +920,7 @@ const allData = [
   [`Resource Use`, `资源使用`],
   [`Resources`, `资源`],
   [`Restart (R)`, `重新开始（R）`],
+  [`Restore Component`, `恢复组件母版`],
   [`Restore Default Thumbnail`, `恢复默认封面`],
   [`Restore Main Component`, `恢复组件母版`],
   [`Restore`, `恢复`],
