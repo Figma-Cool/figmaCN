@@ -871,6 +871,7 @@ const allData = [
   [`Push Overrides to Main Component`, `覆盖组件母版`],
   [`Push`, `推动`],
   [`Radial`, `径向渐变`],
+  [`Radius`, `圆角`],
   [`Rare Ligatures`, `罕见的连字`],
   [`Rasterize Selection`, `像素化所选项`],
   [`Ready to upgrade your plan?`, `准备升级你的计划？`],
