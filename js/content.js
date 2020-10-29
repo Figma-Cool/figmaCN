@@ -1093,7 +1093,7 @@ const allData = [
   [`Status`, `状态`],
   [`Stretch Left and Right`, `左右拉伸`],
   [`Stretch Top and Bottom`, `上下拉伸`],
-  [`Stretch`, `伸展`],
+  [`Stretch`, `拉伸`],
   [`Strikethrough`, `删除线`],
   [`Stroke`, `边框`],
   [`Students and Educators`, `学生和教育工作者`],
