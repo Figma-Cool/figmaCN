@@ -836,6 +836,7 @@ const allData = [
   [`Present`, `演示`],
   [`Presentation`, `演示`],
   [`Preserve scroll position`, `滚动时固定位置`],
+  [`Presets`, `预设`],
   [`Press it now to quickly hide the panes and focus on your work`, `现在按下它可以快速隐藏面板，专注于你的工作`],
   [`Press`, `按下`],
   [`Preview as a`, `预览形式`],
