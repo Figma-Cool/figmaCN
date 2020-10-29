@@ -476,6 +476,7 @@ const allData = [
   [`Fig Pick`, `Fig 精选`],
   [`Figma can export to PNG, JPEG, SVG, and PDF. `, `Figma 可以导出 PNG、JPEG、SVG 和 PDF。`],
   [`Figma Catan (Playable)`, `Figma 卡坦岛 (可玩)`],
+  [`Figma is currently undergoing maintenance and will be temporarily unavailable.`, `Figma 目前正在进行维护，将暂时无法使用。`],
   [`Figma Multiplayer Dice Games!`, `Figma 多人骰子游戏！`],
   [`Figma Organization`, `Figma 组织`],
   [`Figma will now autosave and apply your offline changes when you’re back online, even if you close your tab.`, `Figma 现在将自动保存并在你恢复在线时应用你的离线更改，即使你关闭你的标签页。`],
