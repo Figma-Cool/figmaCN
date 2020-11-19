@@ -868,7 +868,7 @@ const allData = [
   [`Pack Horizontal`, `水平贴合`],
   [`Pack Vertical`, `垂直贴合`],
   [`Packed`, `堆叠`],
-  [`Padding Around Items`, `项目周围的边距`],
+  [`Padding Around Items`, `项目外边距`],
   [`Pages`, `页面`],
   [`Paint Bucket`, `颜料桶`],
   [`Pan`, `抓手`],
