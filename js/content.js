@@ -182,7 +182,7 @@ const allData = [
   [`Author`, `作者`],
   [`Auto Height`, `自动高度`],
   [`Auto layout added`, `已添加自动布局`],
-  [`Auto Layout Alignment`, `自动布局对齐`],
+  [`Auto Layout alignment`, `自动布局对齐`],
   [`Auto Layout has`, `自动布局`],
   [`Auto Layout`, `自动布局`],
   [`Auto Width`, `自动宽度`],
