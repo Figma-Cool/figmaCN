@@ -1432,8 +1432,16 @@ let MutationObserverConfig = {
 let observer = new MutationObserver(function (mutations) {
   let treeWalker = document.createTreeWalker(
     document.body,
-    NodeFilter.SHOW_TEXT,
-    { acceptNode: function (node) { return NodeFilter.FILTER_ACCEPT; } },
+    NodeFilter.SHOW_ALL,
+    { 
+        acceptNode: function (node) {
+            if(node.nodeType === 3 || node.hasAttribute('data-label')) {
+                return NodeFilter.FILTER_ACCEPT;
+            }else {
+                return NodeFilter.FILTER_SKIP;
+            }
+        } 
+    },
     false
   );
   let dataMap = new Map();
@@ -1444,11 +1452,13 @@ let observer = new MutationObserver(function (mutations) {
   });
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-    let key1 = currentNode.textContent;
-    let key2 = currentNode.parentNode.getAttribute('data-label');
-
-    if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
-    if (dataMap.has(key2)) currentNode.parentNode.setAttribute('data-label', dataMap.get(key1));
+    if(currentNode.nodeType === 3) {
+        let key1 = currentNode.textContent;
+        if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+    }else {
+        let key2 = currentNode.getAttribute('data-label');
+        if (dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+    }
 
     currentNode = treeWalker.nextNode();
   }
