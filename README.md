@@ -19,7 +19,7 @@
 * 点击[下载插件包](https://github.com/yancymin/figmaCN/archive/master.zip)到电脑
 * 解压到本地的文件夹
 * 打开 Edge，在地址栏输入 `edge://extensions` 回车，打开插件管理页面
-* 打开左上角「开发人员模式」开关
+* 打开左下角「开发人员模式」开关
 * 点击右上角「加载解压缩的扩展」按钮
 * 选择刚才解压的文件夹
 * 刷新 Figma 页面即可生效
