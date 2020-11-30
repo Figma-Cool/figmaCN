@@ -450,6 +450,7 @@ const allData = [
   [`Duplicate Selection`, `创建选中项的副本`],
   [`Duplicate to Drafts`, `创建副本到草稿`],
   [`Duplicate to your Drafts`, `创建副本到你的草稿`],
+  [`Duplicate to your drafts`, `创建副本到你的草稿`],
   [`Duplicate`, `创建副本`],
   [`Duration`, `持续时间`],
   [`Ease In And Out Back`, `前后回动`],
