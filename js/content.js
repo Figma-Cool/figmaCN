@@ -321,7 +321,7 @@ const allData = [
   [`Copy`, `复制`],
   [`Corner Radius`, `圆角半径`],
   [`Corner Smoothing`, `平滑圆角`],
-  [`Count`, `数量`],
+  [`Count`, `边数`],
   [`Create a Figma Community profile to Like, Follow, and Publish`, `创建 Figma 社区个人主页，就可以点赞、关注和发布`],
   [`Create a new file to start from scratch. Import a Sketch file, PNG, or JPG by dragging and dropping.`, `创建一个新文件从头开始。可以拖拽导入 Sketch 文件、PNG 或 JPG 文件。`],
   [`Create a new personal access token`, `创建新的个人访问令牌`],
