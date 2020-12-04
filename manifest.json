@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.figma.com/*"
+        "*://*.figma.com/*",
+        "*://figma.com/"
       ],
       "js": [
         "js/content.js"
