@@ -1327,7 +1327,7 @@ const allData = [
   [`This project doesn't have any files.`, `这个项目没有任何文件。`],
   [`This team is for Education users only. New users will be required to verify their Education status.`, `这个团队只针对教育用户。新用户需要验证其教育状态。`],
   [`Thumbnail set`, `已设置为封面`],
-  [`Thumbnail size: 1920x960 (1600x960 safe area) `, `封面尺寸：1920x960（1600x960 安全区域）`],
+  [`Thumbnail size: 1920x960 (1600x960 safe area)`, `封面尺寸：1920x960（1600x960 安全区域）`],
   [`Tidy up`, `整理`],
   [`Tile`, `平铺`],
   [`Tint`, `着色`],
