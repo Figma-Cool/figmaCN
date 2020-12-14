@@ -243,7 +243,7 @@ const allData = [
   [`Centered`, `居中`],
   [`Centralized teams`, `中心化的团队`],
   [`Change email`, `修改邮箱`],
-  [`Change Handle`, `修改账号`],
+  [`Change handle`, `修改账号`],
   [`Change icon`, `修改图标`],
   [`Change name`, `修改名字`],
   [`Change password`, `修改密码`],
