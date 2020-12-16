@@ -19,6 +19,7 @@ const allData = [
   [` version history`, ` 版本历史`],
   [` viewers`, `查看者`],
   [` when you choose the annual plan.`, ` 当你选择年付计划时。`],
+  [`· Edited `, `· 编辑于 `],
   [`(best for 9+ seats)`, `（建议 9 个人以上）`],
   [`(missing)`, `(已丢失)`],
   [`(Threads you're involved in)`, `（我参与的主题）`],
