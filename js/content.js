@@ -717,6 +717,7 @@ const allData = [
   [`Invite`, `邀请`],
   [`Isolated Forms`, `独立形式`],
   [`Italic`, `斜体`],
+  [`Join beta`, `加入测试版`],
   [`Join selection`, `连接所选项`],
   [`Join`, `节点`],
   [`Just drag your Sketch files onto the browser and we’ll convert them to Figma for you.`, `只需将你的 Sketch 文件拖到浏览器上，我们将为你转换为 Figma 文件。`],
