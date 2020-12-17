@@ -1593,7 +1593,7 @@ const allData = [
   [`Zoom to next frame`, `缩放至下一个画框`],
   [`Zoom to previous frame`, `缩放至上一个画框`],
   [`Zoom to selection`, `缩放至选中范围`],
-  [`Zoom/View options`, `缩放/视图选项`],
+  [`Zoom/view Options`, `缩放/视图选项`],
   [`Zoom`, `缩放`],
 ]
 
