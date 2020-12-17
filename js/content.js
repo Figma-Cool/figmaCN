@@ -1266,7 +1266,7 @@ const allData = [
   [`Show Toolbar and Footer`, `显示工具条和页脚`],
   [`Show version history`, `查看版本历史`],
   [`Show/hide selection`, `显示/隐藏所选项`],
-  [`Show/hide UI`, `显示/隐藏界面`],
+  [`Show/Hide UI`, `显示/隐藏界面`],
   [`Show/hide`, `显示/隐藏`],
   [`Show`, `显示`],
   [`Silver`, `银色`],
