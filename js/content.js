@@ -964,7 +964,7 @@ const allData = [
   [`Pack horizontal`, `水平堆叠`],
   [`Pack vertical`, `垂直堆叠`],
   [`Packed`, `堆叠`],
-  [`Padding around items`, `项目外边距`],
+  [`Padding around items`, `内边距`],
   [`Page deleted`, `页面已删除`],
   [`Page duplicated`, `已创建页面副本`],
   [`Pages`, `页面`],
