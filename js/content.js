@@ -1254,6 +1254,7 @@ const allData = [
   [`Show in Files`, `在文件中显示`],
   [`Show in project`, `在项目中显示`],
   [`Show left sidebar`, `显示左侧边栏`],
+  [`Show less`, `收起内容`],
   [`Show me what’s new`, `查看新功能`],
   [`Show me`, `定位`],
   [`Show notifications`, `显示通知`],
