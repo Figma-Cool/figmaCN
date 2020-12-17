@@ -1294,7 +1294,7 @@ const allData = [
   [`Some variants are missing properties.`, `有些变体缺少属性。`],
   [`Some variants have the same property values applied. Change the values of these to resolve this.`, `有些变体应用了相同的属性值。修改这些变体的值来解决这个问题。`],
   [`Sort by`, `排序方式`],
-  [`Space between`, `平均分布`],
+  [`Space between`, `等距`],
   [`Space Grey`, `深空灰`],
   [`Space`, `空格`],
   [`Spacing between items`, `项目间距`],
