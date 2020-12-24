@@ -1084,6 +1084,7 @@ const allData = [
   [`Publish...`, `发布…`],
   [`Publish`, `发布`],
   [`Published and up to Date`, `已发布且为最新`],
+  [`Published and up to date`, `已发布且为最新`],
   [`Published`, `已发布时间`],
   [`Publisher`, `发布者`],
   [`Publishing libraty`, `正在发布组件库`],
