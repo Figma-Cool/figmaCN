@@ -1498,6 +1498,7 @@ const allData = [
   [`Unlimited`, `无限制`],
   [`Unlink from styles to customize mixed contents.`, `取消链接样式，可自定义多个内容。`],
   [`Unpublish`, `取消发布`],
+  [`Unsupported file format`, `不支持的文件格式`],
   [`Up to 15 characters (letters, numbers, or _)`, `最多 15 个字符（字母、数字或 _）`],
   [`Up to 2 editors`, `最多 2 个编辑者`],
   [`Update all`, `全部更新`],
