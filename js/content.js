@@ -139,6 +139,7 @@ const allData = [
   [`Add or change your team’s public handle`, `添加或更改你的团队的公众账号`],
   [`Add team members`, `添加团队成员`],
   [`Add to favorites`, `添加到收藏`],
+  [`Add to library`, `添加到组件库`],
   [`Add to version history while editing.`, `当编辑时添加到历史版本`],
   [`Add to version history`, `添加到版本历史`],
   [`Add your collaborators`, `添加协作者`],
