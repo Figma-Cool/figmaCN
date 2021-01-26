@@ -1391,6 +1391,7 @@ const allData = [
   [`Swap Instance`, `交换实例`],
   [`Swap instance`, `交换实例`],
   [`Swap with`, `交换到`],
+  [`Swap overlay`, `交换叠加`],
   [`Table`, `表格`],
   [`Tablet`, `平板电脑`],
   [`Tags`, `标签`],
