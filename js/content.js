@@ -1425,6 +1425,7 @@ const allData = [
   [`Text Styles`, `文本样式`],
   [`Text tool`, `文本工具`],
   [`Text`, `文本`],
+  [`The current document has unsaved changes. Figma will continue trying to save in the background. Please try again later.`, `当前文档有未保存的更改。Figma 将在后台继续尝试保存。请稍后再试。`],
   [`The document has unsaved changes. Figma will continue to try auto-saving your work.`, `该文档有未保存的更改。Figma 将继续尝试自动保存你的工作。`],
   [`The document has unsaved changes. Reconnecting...`, `该文档有未保存的更改。正在重新连接…`],
   [`The file browser allows you to navigate through your account. You can use it to access personal files, create and join teams, and connect with the wider Figma community.`, `文件浏览器允许你在你的账户中进行浏览。你可以用它来访问个人文件，创建和加入团队，并与更广泛的 Figma 社区联系。`],
