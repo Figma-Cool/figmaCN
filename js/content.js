@@ -1439,6 +1439,7 @@ const allData = [
   [`There are more than 50 people working in this file right now, which can cause slowness. To keep things moving, we’ve temporarily turned off edit access and the ability to see other people’s cursors.`, `现在有超过50人在这个文件中工作，这可能会导致速度变慢。为了保证进度，我们已经暂时关闭了编辑权限和查看其他人鼠标指针的功能。`],
   [`There are no published styles in your drafts.`, `你的草稿中没有已发布的样式。`],
   [`They’ll update instantly no matter what network you’re on and with no need to connect via USB.`, `无论你在什么网络上，它们都会立即更新，而且无需通过 USB 连接。`],
+  [`This document contains unsaved changes. These changes are saved locally and will sync when Figma reconnects.`, `本文档包含未保存的更改。这些更改保存在本地，并将在 Figma 重新连接时同步。`],
   [`This file has unsaved changes.`, `当前文件有未保存的更改。`],
   [`This file`, `当前文件`],
   [`This is a Figma Community profile.`, `这是 Figma 社区的个人主页。`],
