@@ -1217,6 +1217,7 @@ const allData = [
   [`Scientific Inferiors`, `科学下标符号`],
   [`Screen`, `滤色`],
   [`Scroll to`, `滚动到`],
+  [`Search commands…`, `搜索命令…`],
   [`Search the Figma Community`, `搜索 Figma 社区`],
   [`Search through all of Figma’s commands`, `搜索 Figma 的全部命令`],
   [`Search…`, `搜索…`],
