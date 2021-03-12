@@ -1088,7 +1088,7 @@ const allData = [
   [`Plugin / file cover`, `插件 / 文件封面`],
   [`Plugin administration`, `插件管理`],
   [`Plugin icon`, `插件图标`],
-  [`Plugin Installed`, `插件安装完成`],
+  [`Plugin installed`, `插件安装完成`],
   [`Plugin`, `插件`],
   [`Plugins`, `插件`],
   [`Polygon`, `多边形`],
