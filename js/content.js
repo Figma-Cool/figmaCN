@@ -664,6 +664,7 @@ const allData = [
   [`Followers`, ` 关注者`],
   [`followers`, ` 关注者`],
   [`Following`, `正在关注`],
+  [`Follows you`, `关注了你`],
   [`Font default`, `字体默认`],
   [`Font doesn’t support small caps`, `字体不支持小型大写字母`],
   [`Font doesn’t support subscript`, `字体不支持下标`],
