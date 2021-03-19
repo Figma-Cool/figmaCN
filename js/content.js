@@ -26,6 +26,7 @@ const allData = [
   [`(best for 9+ seats)`, `（建议 9 个人以上）`],
   [`(missing)`, `(已丢失)`],
   [`(threads you're involved in)`, `（我参与的主题）`],
+  [`(You)`, `(你)`],
   [`/mo.`, `/月`],
   [`←  Everything in Professional, plus`, `←  专业版的所有功能，加上`],
   [`↓ Duplicate`, `↓ 创建副本`],
