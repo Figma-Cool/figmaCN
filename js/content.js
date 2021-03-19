@@ -725,7 +725,7 @@ const allData = [
   [`Help`, `帮助`],
   [`Hide canvas UI during changes`, `在更改期间隐藏画布 UI`],
   [`Hide other layers`, `隐藏其余图层`],
-  [`Hide Version History`, `隐藏历史版本`],
+  [`Hide version history`, `隐藏历史版本`],
   [`Highlight layers on hover`, `突出显示悬停图层`],
   [`Highlights`, `高光`],
   [`Historical Forms`, `历史形式`],
