@@ -342,6 +342,7 @@ const allData = [
   [`Comment notification settings`, `评论通知设置`],
   [`Comment`, `评论`],
   [`Comments are here!`, `评论功能来啦！`],
+  [`Comments from other users`, `来自别人的评论`],
   [`Comments left on my files and plugins`, `对我的文件和插件留下的评论`],
   [`Comments`, `评论`],
   [`Communicate clearly on a small scale with these carefully crafted and inspiring icons`, `用这些精心制作的、鼓舞人心的图标，在小范围内清晰地交流`],
