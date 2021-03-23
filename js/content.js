@@ -237,6 +237,7 @@ const allData = [
   [`Blank canvas`, `空白画布`],
   [`Blank Presets`, `空白预设`],
   [`Blend Mode`, `混合模式`],
+  [`Blend`, `混合`],
   [`Blog`, `博客`],
   [`Blur`, `模糊`],
   [`Bold`, `加粗`],
