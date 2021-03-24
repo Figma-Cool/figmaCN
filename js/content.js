@@ -261,6 +261,7 @@ const allData = [
   [`Browse all plugins`, `浏览所有插件`],
   [`Browse creators`, `浏览创作者`],
   [`Browse libraries...`, `浏览组件库…`],
+  [`Browse plugins in Community`, `在社区中浏览插件`],
   [`Build fully-responsive components with new Auto Layout updates. Stretch in any direction, control padding independently, and distribute objects evenly—all in an easier to use interface.`, `使用新的自动布局更新来构建完全响应的组件。在任何方向上拉伸，独立控制边距，并在一个更容易使用的界面中均匀地分配对象。`],
   [`Bulleted list`, `项目符号列表`],
   [`button.`, `按钮。`],
