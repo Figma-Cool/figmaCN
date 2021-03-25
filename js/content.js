@@ -1086,7 +1086,7 @@ const allData = [
   [`Phone`, `手机`],
   [`Pick color`, `吸取颜色`],
   [`Pin to project`, `在项目中置顶`],
-  [`Pinned`, `置顶`],
+  [`Pinned`, `已置顶`],
   [`Pixel grid hidden`, `隐藏像素网格`],
   [`Pixel grid visible`, `显示像素网格`],
   [`Pixel grid`, `像素网格`],
