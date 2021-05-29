@@ -4,6 +4,7 @@ const allData = [
   [` device.`, ` 设备上下载 Figma Mirror。`],
   [` follower`, ` 关注者`],
   [` following`, ` 正在关注`],
+  [` for unlimited design files, projects, and shared team libraries.`, `用于无限的设计文件、项目和共享的团队库。`],
   [` Get embed code`, ` 获取嵌入代码`],
   [` in the main menu.`, `（在主菜单里面）跳转到那边。`],
   [` Learn more`, ` 了解更多`],
@@ -448,6 +449,7 @@ const allData = [
   [`Cursor chat`, `光标聊天框`],
   [`Cursor`, `光标`],
   [`Curve`, `曲线`],
+  [`Custom libraries (Professional only)`, `自定义组件库（仅限专业版可用）`],
   [`Custom size`, `自定义大小`],
   [`Custom`, `自定义`],
   [`Customers`, `客户`],
@@ -710,6 +712,7 @@ const allData = [
   [`Font size`, `字体大小`],
   [`Font`, `字体`],
   [`Fonts`, `字体`],
+  [`fonts available in Figma.`, `种字体可用于 Figma。`],
   [`for all files in your drafts.`, `给所有草稿里的文件。`],
   [`for all team files.`, ` 给所有团队文件。`],
   [`for as long as you're a verified Education user`, ` 只要你是验证过的教育用户。`],
@@ -904,6 +907,7 @@ const allData = [
   [`Local colors`, `本地颜色`],
   [`Local components`, `本地组件`],
   [`Local fonts are currently not enabled.`, `本地字体目前尚未启用。`],
+  [`Local fonts are enabled. You have `, `本地字体已启用。你有`],
   [`Local styles`, `本地样式`],
   [`Lock/Unlock selection`, `锁定/解锁所选项`],
   [`Lock/Unlock`, `锁定/解锁`],
@@ -1480,6 +1484,7 @@ const allData = [
   [`Start ascending from`, `起始编号`],
   [`Start sequence from`, `起始编号`],
   [`Starter team`, `入门版团队`],
+  [`Starter team overview`, `入门版团队概览`],
   [`Starter`, `入门版`],
   [`Starting frame`, `起始画框`],
   [`Status`, `状态`],
@@ -1552,6 +1557,7 @@ const allData = [
   [`Team permissions: Owner`, `团队权限：创建者`],
   [`Team permissions`, `团队权限`],
   [`Team profile handle`, `团队主页账号`],
+  [`Team project`, `团队项目`],
   [`Team Retrospective Template`, `团队回顾模板`],
   [`team settings`, `团队设置`],
   [`Team Templates`, `团队模板`],
@@ -1683,6 +1689,7 @@ const allData = [
   [`Upgrade your plan to collaborate with more people and better organize your design files.`, `升级你的计划后可以和更多人合作，更好的管理你的设计文件`],
   [`Upgrade your plan to take full advantage of Figma.`, `升级你的计划以充分利用 Figma 的优势。`],
   [`Upgrade your plan`, `升级你的计划`],
+  [`Upgrade your team`, `升级你的团队`],
   [`Upgrade`, `升级`],
   [`Upgraded:`, `升级时间：`],
   [`Upper case`, `大写`],
@@ -1718,6 +1725,7 @@ const allData = [
   [`Video tutorials`, `视频教程`],
   [`View Community page`, `查看社区页面`],
   [`View Community Profile`, `查看社区个人主页`],
+  [`View Community profile`, `查看社区个人主页`],
   [`View only`, `仅查看`],
   [`View page`, `查看页面`],
   [`View Profile`, `查看个人主页`],
@@ -1817,14 +1825,14 @@ let observer = new MutationObserver(function (mutations) {
   let treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ALL,
-    { 
-        acceptNode: function (node) {
-            if(node.nodeType === 3 || node.hasAttribute('data-label')) {
-                return NodeFilter.FILTER_ACCEPT;
-            }else {
-                return NodeFilter.FILTER_SKIP;
-            }
-        } 
+    {
+      acceptNode: function (node) {
+        if (node.nodeType === 3 || node.hasAttribute('data-label')) {
+          return NodeFilter.FILTER_ACCEPT;
+        } else {
+          return NodeFilter.FILTER_SKIP;
+        }
+      }
     },
     false
   );
@@ -1836,12 +1844,12 @@ let observer = new MutationObserver(function (mutations) {
   });
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-    if(currentNode.nodeType === 3) {
-        let key1 = currentNode.textContent;
-        if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
-    }else {
-        let key2 = currentNode.getAttribute('data-label');
-        if (dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+    if (currentNode.nodeType === 3) {
+      let key1 = currentNode.textContent;
+      if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+    } else {
+      let key2 = currentNode.getAttribute('data-label');
+      if (dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
     }
 
     currentNode = treeWalker.nextNode();
