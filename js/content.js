@@ -9,6 +9,8 @@ const allData = [
   [` in the main menu.`, `（在主菜单里面）跳转到那边。`],
   [` Learn more`, ` 了解更多`],
   [` learn more`, ` 了解更多`],
+  [` of 1 project used`, ` / 1 个项目被使用`],
+  [` of 3 Figma design files used`, ` / 3 个 Figma 设计文件被使用`],
   [` on `, ` 发布于 `],
   [` or `, ` 或 `],
   [` projects`, ` 项目`],
@@ -264,6 +266,7 @@ const allData = [
   [`Browse `, `浏览 `],
   [`Browse All Plugins`, `浏览全部插件`],
   [`Browse all plugins`, `浏览所有插件`],
+  [`Browse all templates on Community`, `浏览社区中的所有模板`],
   [`Browse creators`, `浏览创作者`],
   [`Browse libraries...`, `浏览组件库…`],
   [`Browse plugins in Community →`, `在社区中浏览插件 →`],
@@ -513,6 +516,7 @@ const allData = [
   [`Development`, `开发`],
   [`device.`, ` 设备上。`],
   [`Device`, `设备`],
+  [`Diagramming`, `绘图`],
   [`Diamond`, `菱形渐变`],
   [`Difference`, `差集`],
   [`Disabled`, `已禁用`],
@@ -1556,6 +1560,7 @@ const allData = [
   [`Team permissions: No team permissions`, `团队权限：没有团队权限`],
   [`Team permissions: Owner`, `团队权限：创建者`],
   [`Team permissions`, `团队权限`],
+  [`Team meetings`, `团队会议`],
   [`Team profile handle`, `团队主页账号`],
   [`Team project`, `团队项目`],
   [`Team Retrospective Template`, `团队回顾模板`],
@@ -1614,6 +1619,7 @@ const allData = [
   [`To confirm, please enter the name of the team.`, `确认删除，请输入团队名称。`],
   [`To create a component, select a layer and click the "Create component" button in the toolbar.`, `创建组件，请选择一个层，然后单击工具栏中的「创建组件」按钮。`],
   [`to create your own plugin and manage any plugins currently in development.`, ` 来创建你自己的插件，以及管理在开发中的插件`],
+  [`to create and manage your own plugins.`, `创建和管理你自己的插件。`],
   [`To delete a connection, click and drag on either end.`, `要删除连接，请在任一端点单击并拖动。`],
   [`To edit this file, ask the file owner to share it with you with edit permissions.`, `要编辑这个文件，请文件所有者与你分享它的编辑权限。`],
   [`To pin a comment to a specific spot on the design, `, `要将评论钉在设计的特定位置上，`],
@@ -1665,6 +1671,7 @@ const allData = [
   [`Unique handle`, `唯一账号`],
   [`Unliked`, `已取消点赞`],
   [`Unlimited cloud storage`, `无限制的云存储`],
+  [`Unlimited FigJam files (during beta)`, `无限的 FigJam 文件（内测期间）`],
   [`Unlimited version history is available to paid teams.`, `付费的团队可以使用无限的历史版本`],
   [`Unlimited`, `无限制`],
   [`Unlink from styles to customize mixed contents.`, `取消链接样式，可自定义多个内容。`],
@@ -1782,6 +1789,7 @@ const allData = [
   [`You haven't published any plugins yet`, `你还没有发布任何插件`],
   [`You will permanently lose all access to the projects and files in this team, and you cannot undo this action.`, `你将永久失去对该团队中的项目和文件的所有访问权限，并且你无法撤销此操作。`],
   [`You`, `你`],
+  [`You'll need the`, `你需要`],
   [`Your comments`, `你的评论`],
   [`Your description was updated`, `你的简介已更新`],
   [`Your file will soon be available for everyone in the Community to duplicate, remix, and share. Thanks for your contribution. You rock.`, `你的文件很快就会被社区中的每个人复制、重新演绎和分享。感谢你的贡献。你是最棒的。`],
@@ -1825,14 +1833,14 @@ let observer = new MutationObserver(function (mutations) {
   let treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ALL,
-    {
-      acceptNode: function (node) {
-        if (node.nodeType === 3 || node.hasAttribute('data-label')) {
-          return NodeFilter.FILTER_ACCEPT;
-        } else {
-          return NodeFilter.FILTER_SKIP;
-        }
-      }
+    { 
+        acceptNode: function (node) {
+            if(node.nodeType === 3 || node.hasAttribute('data-label')) {
+                return NodeFilter.FILTER_ACCEPT;
+            }else {
+                return NodeFilter.FILTER_SKIP;
+            }
+        } 
     },
     false
   );
@@ -1844,12 +1852,12 @@ let observer = new MutationObserver(function (mutations) {
   });
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-    if (currentNode.nodeType === 3) {
-      let key1 = currentNode.textContent;
-      if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
-    } else {
-      let key2 = currentNode.getAttribute('data-label');
-      if (dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+    if(currentNode.nodeType === 3) {
+        let key1 = currentNode.textContent;
+        if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+    }else {
+        let key2 = currentNode.getAttribute('data-label');
+        if (dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
     }
 
     currentNode = treeWalker.nextNode();
