@@ -387,6 +387,7 @@ const allData = [
   [`Connector`, `连线`],
   [`Constrain proportions`, `约束比例`],
   [`Constraints and Resizing`, `约束和调整大小`],
+  [`Constraints and resizing`, `约束和调整大小`],
   [`Constraints`, `约束`],
   [`Contact a team admin to enable default libraries for your team.`, `联系团队管理员，为你的团队启用默认组件库。`],
   [`Contact sales`, `联系销售团队`],
