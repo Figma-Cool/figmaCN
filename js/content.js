@@ -933,6 +933,7 @@ const allData = [
   [`Lowercase`, `小写`],
   [`Luminosity`, `明度`],
   [`Main component`, `组件母版`],
+  [`Main menu`, `主菜单`],
   [`Manage plugins…`, `管理插件…`],
   [`Manage Slack notifications`, `管理 Slack 通知`],
   [`Manual`, `手动`],
