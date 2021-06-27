@@ -892,6 +892,7 @@ const allData = [
   [`Learn more about team plans`, `了解更多关于团队计划的信息`],
   [`Learn more…`, `了解更多…`],
   [`Learn more...`, `了解更多…`],
+  [` Learn more...`, ` 了解更多…`],
   [`Learn more`, `了解更多`],
   [`Leave notes right in your design files.`, `在你的设计文件中直接留下信息。`],
   [`Leave team`, `离开团队`],
