@@ -1462,6 +1462,7 @@ const allData = [
   [`Show me`, `定位`],
   [`Show more`, `查看更多`],
   [`Show notifications`, `显示通知`],
+  [`Show older`, `查看更早版本`],
   [`Show only your comments`, `只显示你的评论`],
   [`Show presets and templates selector when creating new files`, `创建新文件时显示预设和模板选择器`],
   [`Show prototype settings`, `显示原型设置`],
