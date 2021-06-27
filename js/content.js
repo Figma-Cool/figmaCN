@@ -143,6 +143,7 @@ const allData = [
   [`Add more seats`, `添加更多席位`],
   [`Add new folder`, `添加新文件夹`],
   [`Add new page`, `添加新页面`],
+  [`Add new property`, `添加新属性`],
   [`Add New Property`, `添加新属性`],
   [`Add new variant`, `添加新变体`],
   [`Add New Variant`, `添加新变体`],
