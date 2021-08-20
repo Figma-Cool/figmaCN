@@ -835,6 +835,7 @@ const allData = [
   [`Import Sketch or .fig file`, `导入 Sketch 或 .fig 文件`],
   [`Import`, `导入`],
   [`Importing file...`, `正在导入文件…`],
+  [`Improve performance by enabling hardware acceleration`, `通过启用硬件加速提高性能`],
   [`In development`, `正在开发`],
   [`Inactive`, `不活跃`],
   [`Include bounding box`, `包含边界框`],
