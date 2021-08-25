@@ -1420,7 +1420,7 @@ const allData = [
   [`Save local copy…`, `保存本地副本…`],
   [`Save photo`, `保存图片`],
   [`Save time and accelerate your workflow with beautifully designed templates`, `使用设计精美的模板节省时间，加快工作流程`],
-  [`Save time with templates`, `利用模板节省时间`],
+  [`Save time with templates`, `使用模板节省时间`],
   [`Save to version history…`, `保存至版本历史…`],
   [`Save`, `保存`],
   [`Saving…`, `保存中…`],
