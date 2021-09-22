@@ -1195,7 +1195,7 @@ const allData = [
   [`Pass through`, `穿透`],
   [`Password`, `密码`],
   [`Paste and match style`, `粘贴并匹配样式`],
-  [`Paste here`, `粘贴在这里`],
+  [`Paste here`, `粘贴到这里`],
   [`Paste over selection`, `粘贴至所选位置`],
   [`Paste properties`, `粘贴属性`],
   [`Paste to replace`, `粘贴替换`],
