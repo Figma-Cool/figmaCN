@@ -1977,7 +1977,7 @@ let observer = new MutationObserver(function (mutations) {
     NodeFilter.SHOW_ALL,
     { 
         acceptNode: function (node) {
-            if(node.nodeType === 3 || node.hasAttribute('data-label')) {
+            if(node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
                 return NodeFilter.FILTER_ACCEPT;
             }else {
                 return NodeFilter.FILTER_SKIP;
@@ -1999,7 +1999,11 @@ let observer = new MutationObserver(function (mutations) {
         if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
     }else {
         let key2 = currentNode.getAttribute('data-label');
-        if (dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+        if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+        let key3 = currentNode.getAttribute('placeholder') || '';
+        if (key3 = key3.trim()) {
+            if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
+        }
     }
 
     currentNode = treeWalker.nextNode();
