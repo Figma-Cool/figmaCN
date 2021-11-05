@@ -140,6 +140,7 @@ const allData = [
   [`Add a little magic to your files`, `为你的文件添加一点魔法`],
   [`Add a location`, `添加位置`],
   [`Add a project to your favorites to see it here`, `添加项目到你的收藏，就会在此处显示`],
+  [`Add a token description`, `添加令牌描述`],
   [`Add a website`, `添加网站`],
   [`Add account`, `添加帐户`],
   [`Add another`, `添加更多`],
