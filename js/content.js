@@ -1,4 +1,5 @@
 const allData = [
+  [` · Edited `, ` · 编辑于 `],
   [` autosave `, ` 个自动保存 `],
   [` colors`, ` 种颜色`],
   [` Copy link`, ` 复制链接`],
@@ -33,7 +34,6 @@ const allData = [
   [`. Deleting this team will delete all associated data, such as projects, files, prototypes, for all users.`, `。删除此团队将删除所有用户的所有关联数据，例如项目、文件、原型。`],
   [`. Please assign a new owner from the team members list before leaving this team.`, `“的创建者。在离开这个团队之前，请从团队成员列表中指定一个新的创建者。`],
   [`.`, `。`],
-  [`· Edited `, `· 编辑于 `],
   [`’ project. Notifications are encrypted.`, `”项目中的文件发表评论时，就会收到通知。通知是加密的。`],
   [`(best for 9+ seats)`, `（建议 9 个人以上）`],
   [`(missing)`, `(已丢失)`],
@@ -1488,6 +1488,7 @@ const allData = [
   [`Remove from library`, `从组件库移除`],
   [`Remove from pinned`, `从置顶中移除`],
   [`Remove from recent`, `从最近中移除`],
+  [`Remove  from recent`, `从最近中移除`],
   [`Remove mask`, `移除蒙版`],
   [`Remove property`, `移除属性`],
   [`Remove stroke`, `移除描边`],
