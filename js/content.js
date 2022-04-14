@@ -1712,6 +1712,7 @@ const allData = [
   [`Show toolbar and footer`, `显示工具条和页脚`],
   [`Show version history`, `查看版本历史`],
   [`Show/hide author`, `显示/隐藏作者`],
+  [`Show/Hide comments`, `显示/隐藏评论`],
   [`Show/Hide selection`, `显示/隐藏所选项`],
   [`Show/Hide UI`, `显示/隐藏界面`],
   [`Show/Hide`, `显示/隐藏`],
