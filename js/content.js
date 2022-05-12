@@ -1832,6 +1832,7 @@ const allData = [
   [`Spacing between items`, `项目间距`],
   [`Spacing mode`, `间距模式`],
   [`Speakers`, `扬声器`],
+  [`Spotlight me`, `开启聚光灯`],
   [`Spread`, `扩展`],
   [`Square`, `方头`],
   [`Stamp`, `印章`],
