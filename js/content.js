@@ -1036,6 +1036,7 @@ const allData = [
   [`Inner shadow`, `内阴影`],
   [`Insert component`, `插入组件`],
   [`Inside`, `内部`],
+  [`Inspect`, `检查`],
   [`inspect`, `检查`],
   [`Install Font Helper`, `安装字体帮助程序`],
   [`Install`, `安装`],
