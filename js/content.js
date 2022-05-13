@@ -322,7 +322,6 @@ const allData = [
   [`Assembling components and styles`, `正在合并组件和样式`],
   [`Assets`, `资源`],
   [`Author`, `作者`],
-  [`Auto`, `自动`],
   [`Auto height`, `自动高度`],
   [`Auto layout added`, `已添加自动布局`],
   [`Auto layout alignment`, `自动布局对齐`],
@@ -353,8 +352,8 @@ const allData = [
   [`Blur`, `模糊`],
   [`Bold/Italic`, `加粗/斜体`],
   [`Bold`, `加粗`],
-  [`Boolean`, `布尔值`],
   [`Boolean groups`, `布尔组合`],
+  [`Boolean`, `布尔值`],
   [`Boosted by the Figma Team`, `由 Figma 团队驱动`],
   [`Borders`, `边框`],
   [`Bottom center alignment`, `底部中间对齐`],
@@ -444,10 +443,10 @@ const allData = [
   [`Choose a resource to publish to Community. Prototypes can only be published from the file editor.`, `选择要发布到社区的资源。原型只能从文件编辑器中发布。`],
   [`Choose a slack channel to notify whenever someone comments on a file in the ‘`, `选择一个 Slack 频道，每当有人对“`],
   [`Choose Education`, `选择教育版`],
-  [`Choose library`, `选择组件库`],
   [`Choose Image...`, `选择图片…`],
   [`Choose Image…`, `选择图片…`],
   [`choose instance`, `选择实例`],
+  [`Choose library`, `选择组件库`],
   [`Choose Organization`, `选择组织版`],
   [`Choose Professional`, `选择专业版`],
   [`Choose Starter`, `选择入门版`],
@@ -479,8 +478,8 @@ const allData = [
   [`Color Styles`, `颜色样式`],
   [`Color`, `颜色`],
   [`Colors`, `颜色`],
+  [`Columns `, `列 `],
   [`Columns`, `列`],
-  [`Columns `, `列`],
   [`Combine as Variants`, `合并为变体`],
   [`Combine as variants`, `合并为变体`],
   [`Comment actions`, `评论操作`],
@@ -531,8 +530,8 @@ const allData = [
   [`Contrast`, `对比度`],
   [`Control alignment at the parent level`, `在父级控制对齐`],
   [`Control their access with granular permissons and manage their access in one simple place.`, `通过精细的权限控制他们的访问，并在一个简单的地方管理他们的访问。`],
+  [`Copied as png`, `已复制为 PNG`],
   [`Copied to clipboard`, `已复制到剪贴板`],
-  [`Copied as png`, `复制为PNG`],
   [`Copy as CSS`, `复制为 CSS`],
   [`Copy as PNG`, `复制为 PNG`],
   [`Copy as SVG`, `复制为 SVG`],
@@ -574,10 +573,10 @@ const allData = [
   [`Create new text style`, `创建新的文本样式`],
   [`Create profile`, `创建主页`],
   [`Create project`, `创建项目`],
-  [`Create property`, `确定`],
-  [`Create scroll`, `创建`],
+  [`Create property`, `创建属性`],
+  [`Create scroll`, `创建滚动`],
+  [`Create section`, `创建分节`],
   [`Create style`, `创建样式`],
-  [`Create section`, `创建部分`],
   [`Create team`, `创建团队`],
   [`Create teams to share design libraries with collaborators and organize files into Projects`, `创建团队，与协作者共享设计组件库，并将文件存放到项目中`],
   [`Create teams to share design libraries with collaborators and organize files into projects`, `创建团队，与合作者共享设计组件库，并将文件组织成项目。`],
@@ -783,10 +782,10 @@ const allData = [
   [`Emote`, `表情`],
   [`Enable and set default team libraries for all team files`, `启用并设置所有团队文件的默认团队组件库。`],
   [`Enable interactive components`, `启用交互式组件`],
-  [`Enable libraries for all team files from your`, `为所有团队文件启用组件库，打开`],
   [`Enable libraries for all team files from your `, `为所有团队文件启用组件库，打开`],
+  [`Enable libraries for all team files from your`, `为所有团队文件启用组件库，打开`],
+  [`Enable libraries for all your drafts from your `, `为所有草稿启用组件库，`],
   [`Enable libraries`, `启用组件库`],
-  [`Enable libraries for all your drafts from your `, `为你所有草稿启用组件库，`],
   [`Enable non-Education editors by upgrading to a Professional team.`, `通过升级为专业团队，以启用非教育编辑者。`],
   [`Enable quick access to other libraries in this file. `, `可以快速访问该文件中的其他组件库。`],
   [`Enable quick access to other libraries in this file.`, `可以快速访问该文件中的其他组件库。`],
@@ -892,7 +891,7 @@ const allData = [
   [`Fix position when scrolling`, `滚动时保持固定`],
   [`Fixed Height`, `固定高度`],
   [`Fixed height`, `固定高度`],
-  [`Fixed size`, `固定大小，按alt键切换为截断文本`],
+  [`Fixed size`, `固定大小`],
   [`Fixed Width`, `固定宽度`],
   [`Fixed width`, `固定宽度`],
   [`Fixed`, `固定`],
@@ -1128,10 +1127,10 @@ const allData = [
   [`Leave`, `离开`],
   [`leave`, `离开`],
   [`Left & Right`, `左 & 右`],
-  [`Left to right`, `从左到右`],
   [`Left alignment`, `左对齐`],
   [`Left and right`, `左右拉伸`],
   [`Left padding`, `左边距`],
+  [`Left to right`, `从左到右`],
   [`Left-leaning parallelogram`, `左倾的平行四边形`],
   [`Left`, `左`],
   [`Legal summary`, `法律摘要`],
@@ -1263,10 +1262,10 @@ const allData = [
   [`Multiplayer`, `多用户`],
   [`Multiply`, `正片叠底`],
   [`Mute sound for yourself`, `为自己静音`],
-  [`Name this version`, `给这个版本命名`],
-  [`Name your team`, `给团队取个名字`],
-  [`Name`, `名称`],
   [`Name duplicated`, `名称重复`],
+  [`Name this version`, `给这个版本命名`],
+  [`Name your team`, `为团队命名`],
+  [`Name`, `名称`],
   [`Navigate to`, `导航到`],
   [`Need some design inspiration? Explore files, plugins, and widgets created by the Figma Community.`, `需要一些设计灵感吗？探索 Figma 社区创建的文件、插件和小部件。`],
   [`new & noteworthy`, `新增 & 值得注意`],
@@ -1281,7 +1280,7 @@ const allData = [
   [`New Plugin...`, `新建插件…`],
   [`New project`, `新建项目`],
   [`New shape or sticky`, `新建形状或便利贴`],
-  [`New style`, `新样式`],
+  [`New style`, `新建样式`],
   [`New Team…`, `新建团队…`],
   [`New Team...`, `新建团队…`],
   [`New timer`, `新增计时器`],
@@ -1522,7 +1521,7 @@ const allData = [
   [`Publish to Community`, `发布到社区`],
   [`Publish update...`, `发布更新…`],
   [`Publish your changes to your team library.`, `将你的改动发布到你的团队组件库中。`],
-  [`Publish...`, `发布`],
+  [`Publish...`, `发布…`],
   [`Publish`, `发布`],
   [`Published and up to Date`, `已发布且为最新`],
   [`Published and up to date`, `已发布且为最新`],
@@ -1530,6 +1529,7 @@ const allData = [
   [`Publisher`, `发布者`],
   [`Publishing library`, `正在发布组件库`],
   [`Push changes to main component`, `覆盖组件母版`],
+  [`Push overrides to main component`, `覆盖组件母版`],
   [`Push`, `推动`],
   [`Quick actions…`, `快速操作…`],
   [`Quick`, `快速`],
@@ -1599,8 +1599,8 @@ const allData = [
   [`Resend invite`, `重新发送邀请`],
   [`Resend Invite`, `重新发送邀请`],
   [`resend`, `重新发送`],
-  [`Reset all overrides`, `重置所有覆盖`],
   [`Reset all changes`, `重置所有更改`],
+  [`Reset all overrides`, `重置所有覆盖`],
   [`Reset effects`, `重置效果`],
   [`Reset exports`, `重置导出`],
   [`Reset fill`, `重置填充`],
@@ -1647,8 +1647,8 @@ const allData = [
   [`Review`, `查看`],
   [`Revoke access`, `撤销访问`],
   [`Right alignment`, `右对齐`],
-  [`Right to left`, `从右到左`],
   [`Right padding`, `右边距`],
+  [`Right to left`, `从右到左`],
   [`right-click`, `右击`],
   [`Right-leaning parallelogram`, `右倾的平行四边形`],
   [`Right-to-left Mirrored Forms`, `从右到左镜像形式`],
@@ -1660,9 +1660,9 @@ const allData = [
   [`Round to pixel`, `对齐像素`],
   [`Round`, `圆头`],
   [`Rounded rectangle`, `圆角矩形`],
-  [`Ruby notation forms`, `注音字符形式`],
+  [`Rows `, `行 `],
   [`Rows`, `行`],
-  [`Rows `, `行`],
+  [`Ruby notation forms`, `注音字符形式`],
   [`Rulers`, `标尺`],
   [`Run last plugin`, `运行最后一个插件`],
   [`Running your prototype`, `启动你的原型`],
@@ -1694,10 +1694,9 @@ const allData = [
   [`Search through all of Figma’s commands`, `搜索 Figma 的全部命令`],
   [`Search through menus, commands, and plugins`, `搜索菜单、命令和插件`],
   [`Search users`, `搜索用户`],
-  [`Search Untitled`, `搜索用户`],
   [`Search…`, `搜索…`],
   [`Search`, `搜索`],
-  [`seat/month`, `人/月`],
+  [`seat/month`, `席位/月`],
   [`Security`, `安全`],
   [`See all `, `查看所有 `],
   [`See all`, `查看全部`],
@@ -1769,7 +1768,7 @@ const allData = [
   [`Shared Projects`, `共享的项目`],
   [`Shared`, `已共享`],
   [`Sharing and Permissions`, `分享和权限`],
-  [`Show as grid`, `宫格视图`],
+  [`Show as grid`, `网格视图`],
   [`Show as list`, `列表视图`],
   [`Show assets`, `显示资源`],
   [`Show autosave versions`, `显示自动保存的版本`],
@@ -1929,8 +1928,8 @@ const allData = [
   [`Swap fill and stroke`, `交换填充和描边`],
   [`Swap instance`, `交换实例`],
   [`Swap Instance`, `交换实例`],
-  [`Swap overlay`, `交换叠加`],
   [`Swap library`, `交换组件库`],
+  [`Swap overlay`, `交换叠加`],
   [`Swap start and end points`, `交换起始点和结束点`],
   [`Swap with`, `交换到`],
   [`Switch account`, `切换帐户`],
@@ -2143,7 +2142,6 @@ const allData = [
   [`Value`, `值`],
   [`Values`, `值`],
   [`Variants`, `变体`],
-  [`Variable`, `变形`],
   [`Vector networks`, `矢量网络`],
   [`Vector`, `矢量`],
   [`Version `, `版本 `],
@@ -2281,40 +2279,40 @@ let MutationObserverConfig = {
 
 let observer = new MutationObserver(function (mutations) {
   let treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ALL,
-  { 
-    acceptNode: function (node) {
-      if(node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
-        return NodeFilter.FILTER_ACCEPT;
-      }else {
-        return NodeFilter.FILTER_SKIP;
+    document.body,
+    NodeFilter.SHOW_ALL,
+    {
+      acceptNode: function (node) {
+        if (node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
+          return NodeFilter.FILTER_ACCEPT;
+        } else {
+          return NodeFilter.FILTER_SKIP;
+        }
       }
-    } 
-  },
-  false
+    },
+    false
   );
   let dataMap = new Map();
   allData.forEach(([key, val]) => {
-  if (key && !dataMap.has(key)) {
-    dataMap.set(key, val);
-  }
+    if (key && !dataMap.has(key)) {
+      dataMap.set(key, val);
+    }
   });
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-  if(currentNode.nodeType === 3) {
-    let key1 = currentNode.textContent;
-    if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
-  }else {
-    let key2 = currentNode.getAttribute('data-label');
-    if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
-    let key3 = currentNode.getAttribute('placeholder') || '';
-    if (key3 = key3.trim()) {
-      if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
+    if (currentNode.nodeType === 3) {
+      let key1 = currentNode.textContent;
+      if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+    } else {
+      let key2 = currentNode.getAttribute('data-label');
+      if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+      let key3 = currentNode.getAttribute('placeholder') || '';
+      if (key3 = key3.trim()) {
+        if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
+      }
     }
-  }
 
-  currentNode = treeWalker.nextNode();
+    currentNode = treeWalker.nextNode();
   }
 });
 
