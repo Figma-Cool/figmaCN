@@ -72,6 +72,7 @@ const allData = [
   [`11 hours ago`, `11 小时前`],
   [`11 minutes ago`, `11 分钟前`],
   [`11 months ago`, `11 个月前`],
+  [`12 columns  (auto)`, `12 列（自动）`],
   [`12 days ago`, `12 天前`],
   [`12 hours ago`, `12 小时前`],
   [`12 minutes ago`, `12 分钟前`],
@@ -96,6 +97,7 @@ const allData = [
   [`19 days ago`, `19 天前`],
   [`19 hours ago`, `19 小时前`],
   [`19 minutes ago`, `19 分钟前`],
+  [`2 columns  (auto)`, `2 列（自动）`],
   [`2 days ago`, `2 天前`],
   [`2 hours ago`, `2 小时前`],
   [`2 minutes ago`, `2 分钟前`],
@@ -125,6 +127,7 @@ const allData = [
   [`28 minutes ago`, `28 分钟前`],
   [`29 days ago`, `29 天前`],
   [`29 minutes ago`, `29 分钟前`],
+  [`3 columns  (auto)`, `3 列（自动）`],
   [`3 days ago`, `3 天前`],
   [`3 hours ago`, `3 小时前`],
   [`3 minutes ago`, `3 分钟前`],
@@ -169,6 +172,7 @@ const allData = [
   [`57 minutes ago`, `57 分钟前`],
   [`58 minutes ago`, `58 分钟前`],
   [`59 minutes ago`, `59 分钟前`],
+  [`6 columns  (auto)`, `6 列（自动）`],
   [`6 days ago`, `6 天前`],
   [`6 hours ago`, `6 小时前`],
   [`6 minutes ago`, `6 分钟前`],
@@ -276,7 +280,7 @@ const allData = [
   [`Align`, `对齐`],
   [`Alignment and padding`, `对齐和边距`],
   [`Alignment is now controlled from the auto layout parent frame.`, `现在可以通过自动布局父画框来控制对齐。`],
-  [`Alignment is now set on the parent frame instead of on each independent object. And objects can be spaced evenly in a click. `, `现在，对齐方式是在父画框上设置，而不是在每个独立对象上设置。而且对象可以一键平均分布。`],
+  [`Alignment is now set on the parent frame instead of on each independent object. And objects can be spaced evenly in a click. `, `现在，对齐方式是在父画框上设置，而不是在每个单独对象上设置。而且对象可以一键平均分布。`],
   [`Alignment`, `对齐`],
   [`All comments`, `全部评论`],
   [`All design files`, `全部设计文件`],
@@ -329,6 +333,7 @@ const allData = [
   [`Auto layout`, `自动布局`],
   [`Auto width`, `自动宽度`],
   [`Auto`, `自动`],
+  [`Autoflow`, `自动流程`],
   [`Back to files`, `返回文件列表`],
   [`Back to Log in`, `返回以登录`],
   [`Back`, `后退`],
@@ -339,7 +344,7 @@ const allData = [
   [`Bend tool`, `弯曲工具`],
   [`Best Practices`, `最佳实践`],
   [`Beta`, `测试`],
-  [`Bevel`, `斜面`],
+  [`Bevel`, `斜角`],
   [`Bi-weekly email of noteworthy resources and creators`, `每两周一次的电子邮件，包括值得关注的资源和创作者`],
   [`Big nudge`, `大微调`],
   [`Billed annually or US$15 / editor / month`, `按年计费，或 15 美元/编辑者/月。`],
@@ -381,8 +386,9 @@ const allData = [
   [`Browse creators`, `浏览创作者`],
   [`Browse libraries...`, `浏览组件库…`],
   [`Browse plugins in Community →`, `在社区中浏览插件 →`],
+  [`Browse plugins in Community`, `在社区中浏览插件`],
   [`Browse templates`, `浏览模板`],
-  [`Build fully-responsive components with new Auto Layout updates. Stretch in any direction, control padding independently, and distribute objects evenly—all in an easier to use interface.`, `使用新的自动布局更新来构建完全响应的组件。在任何方向上拉伸，独立控制边距，并在一个更容易使用的界面中均匀地分配对象。`],
+  [`Build fully-responsive components with new Auto Layout updates. Stretch in any direction, control padding independently, and distribute objects evenly—all in an easier to use interface.`, `使用新的自动布局更新来构建完全响应的组件。在任何方向上拉伸，单独控制边距，并在一个更容易使用的界面中均匀地分配对象。`],
   [`Bulleted list`, `项目符号`],
   [`Business model canvas`, `商业模式画布`],
   [`button.`, `按钮。`],
@@ -405,7 +411,7 @@ const allData = [
   [`Cap`, `端点`],
   [`Capital spacing`, `大写字母间隔`],
   [`Careers`, `工作机会`],
-  [`Case-Sensitive Forms`, `大小写敏感形式`],
+  [`Case-sensitive forms`, `区分大小写`],
   [`Case`, `大小写`],
   [`Center alignment`, `居中对齐`],
   [`Center`, `居中`],
@@ -426,17 +432,17 @@ const allData = [
   [`Changes not yet published`, `未发布的改动`],
   [`Changes saved`, `改动已保存`],
   [`Changes`, `改动`],
-  [`Character variant 1`, `字符变体 1`],
-  [`Character variant 10`, `字符变体 10`],
-  [`Character variant 2`, `字符变体 2`],
-  [`Character variant 3`, `字符变体 3`],
-  [`Character variant 4`, `字符变体 4`],
-  [`Character variant 5`, `字符变体 5`],
-  [`Character variant 6`, `字符变体 6`],
-  [`Character variant 7`, `字符变体 7`],
-  [`Character variant 8`, `字符变体 8`],
-  [`Character variant 9`, `字符变体 9`],
-  [`Character variants`, `字符变体`],
+  [`Character variant 1`, `替代字形 1`],
+  [`Character variant 10`, `替代字形 10`],
+  [`Character variant 2`, `替代字形 2`],
+  [`Character variant 3`, `替代字形 3`],
+  [`Character variant 4`, `替代字形 4`],
+  [`Character variant 5`, `替代字形 5`],
+  [`Character variant 6`, `替代字形 6`],
+  [`Character variant 7`, `替代字形 7`],
+  [`Character variant 8`, `替代字形 8`],
+  [`Character variant 9`, `替代字形 9`],
+  [`Character variants`, `替代字形`],
   [`Check your microphone permissions to start chatting.`, `检查你的麦克风权限再开始聊天。`],
   [`Choose a channel...`, `选择一个频道…`],
   [`Choose a plan`, `选择一个计划`],
@@ -445,6 +451,7 @@ const allData = [
   [`Choose Education`, `选择教育版`],
   [`Choose Image...`, `选择图片…`],
   [`Choose Image…`, `选择图片…`],
+  [`Choose instance`, `选择实例`],
   [`choose instance`, `选择实例`],
   [`Choose library`, `选择组件库`],
   [`Choose Organization`, `选择组织版`],
@@ -501,7 +508,7 @@ const allData = [
   [`Community Spotlight`, `社区热点`],
   [`Community`, `社区`],
   [`Compare`, `对比`],
-  [`Component details`, `组件详情`],
+  [`Component details`, `组件文档`],
   [`Component updates available`, `组件有更新`],
   [`Component`, `组件`],
   [`Components`, `组件`],
@@ -509,6 +516,7 @@ const allData = [
   [`Congratulations!`, `干得漂亮！`],
   [`Connect multiple Figma accounts to use a single Community profile and merge multiple profiles into one. Publish content, follower creators, save likes, and receive notifications without having to switch accounts.`, `连接多个 Figma 账户以使用单一的社区配置文件，并将多个配置文件合并为一个。发布内容、关注创建者、保存喜欢的内容并接收通知，而无需切换账户。`],
   [`Connected apps`, `已连接的应用`],
+  [`Connected. Check your microphone permissions to start chatting.`, `已连接。请检查你的麦克风权限后再聊天。`],
   [`Connected`, `已连接`],
   [`Connecting…`, `正在连接…`],
   [`Connector`, `连线`],
@@ -523,7 +531,7 @@ const allData = [
   [`Contact`, `联系`],
   [`Content`, `内容`],
   [`Contents Only`, `仅内容`],
-  [`Contextual Ligatures`, `上下文连字`],
+  [`Contextual alternates`, `上下文连字`],
   [`Continue to Payment`, `继续支付`],
   [`Continue with Google`, `使用谷歌账户继续`],
   [`Continue`, `继续`],
@@ -704,7 +712,7 @@ const allData = [
   [`Do Nothing`, `不用了`],
   [`Do you want to open this file in the Desktop App?`, `你希望一直在桌面应用中打开这个文件吗？`],
   [`Dock to side`, `靠到侧边`],
-  [`Document colors`, `文件中的颜色`],
+  [`Document colors`, `本文件的颜色`],
   [`Documentation link`, `文档链接`],
   [`Documentation`, `文档`],
   [`Don't see a project? Try searching for it.`, `找不到项目？搜索一下试试看。`],
@@ -742,15 +750,18 @@ const allData = [
   [`Ease out back`, `结束晃动`],
   [`Ease out`, `后缓动`],
   [`Edit a file`, `编辑一个文件`],
+  [`Edit boolean property`, `编辑布尔属性`],
   [`Edit Current Version`, `编辑当前版本`],
   [`Edit description`, `编辑描述`],
   [`Edit file page`, `编辑文件页面`],
   [`Edit hyperlink`, `编辑超链接`],
+  [`Edit instance swap property`, `编辑组件实例交换属性`],
   [`Edit object`, `编辑对象`],
   [`Edit property`, `编辑属性`],
   [`Edit shape or image`, `编辑形状或图片`],
   [`Edit Style`, `编辑样式`],
   [`Edit style`, `编辑样式`],
+  [`Edit text property`, `编辑文本属性`],
   [`Edit text`, `编辑文本`],
   [`Edit this page`, `编辑此页面`],
   [`Edit variant property`, `编辑变体属性`],
@@ -942,7 +953,7 @@ const allData = [
   [`Full widths`, `全宽`],
   [`Fun activities`, `趣味活动`],
   [`Gap`, `间距`],
-  [`Gentle`, `轻柔`],
+  [`Gentle`, `平缓`],
   [`Get desktop app`, `下载桌面版应用`],
   [`Get feedback, requests, and copy updates where you’ll use them, not in your inbox.`, `在你使用的时候就获取反馈、请求和副本更新，而不是在你的收件箱。`],
   [`Get help`, `获取帮助`],
@@ -953,7 +964,7 @@ const allData = [
   [`Give feedback, ask a question, or just leave a note of appreciation. Click anywhere in the file to leave a comment.`, `提供反馈，提出问题，或只是留下鼓励的话。点击文件中的任意位置，即可留下评论。`],
   [`Go to frame`, `跳转到画框`],
   [`Go to main component`, `跳转到组件母版`],
-  [`Go to project`, `跳转到项目`],
+  [`Go to project`, `跳转到项目页面`],
   [`Go to style definition to edit`, `跳转到样式定义以编辑`],
   [`Go to the browser to complete login`, `跳转到浏览器以完成登录`],
   [`Gold`, `金色`],
@@ -1044,6 +1055,7 @@ const allData = [
   [`Initial Forms`, `词首形式`],
   [`Inner border`, `内边框`],
   [`Inner shadow`, `内阴影`],
+  [`Insert Big Image`, `插入大图片`],
   [`Insert component`, `插入组件`],
   [`Inside`, `内部`],
   [`Inspect`, `检查`],
@@ -1075,14 +1087,15 @@ const allData = [
   [`Invite-only — let me choose who has access`, `仅限邀请 - 让我选择谁可以访问`],
   [`Invite-only`, `仅限邀请`],
   [`Invite`, `邀请`],
-  [`Isolated Forms`, `独立形式`],
+  [`Isolated Forms`, `单独形式`],
   [`Italic`, `斜体`],
   [`Join beta`, `加入测试版`],
   [`Join selection`, `连接所选项`],
-  [`Join`, `节点`],
+  [`Join`, `连接`],
   [`Just drag your Sketch files onto the browser and we’ll convert them to Figma for you.`, `只需将你的 Sketch 文件拖到浏览器上，我们将为你转换为 Figma 文件。`],
   [`just now`, `刚刚`],
   [`Just now`, `刚刚`],
+  [`Keep the object in place when scrolling in prototypes.`, `在演示原型时，启动该功能的元素会被固定在原位，不随页面一起滚动。`],
   [`Keep things respectful and constructive. We love free expression and healthy debate, but we’ll suspend or remove you for posting abusive or vulgar comments.`, `保持尊重和建设性的态度。我们喜欢自由的表达和健康的辩论，但我们会暂停或删除你发布的辱骂或粗俗的评论。`],
   [`Keep tool selected after use`, `使用后保持工具选择`],
   [`Kerning pairs`, `字偶距组合`],
@@ -1115,7 +1128,7 @@ const allData = [
   [`Layout grids hidden`, `隐藏布局网格`],
   [`Layout grids visible`, `显示布局网格`],
   [`Layout grids`, `布局网格`],
-  [`Learn how to turn on closed captioning`, `了解如何打开封闭式字幕`],
+  [`Learn how to turn on closed captioning`, `了解如何打开隐藏式字幕`],
   [`Learn more →`, `了解更多 →`],
   [`Learn more about team plans`, `了解更多关于团队计划的信息`],
   [`Learn more…`, `了解更多…`],
@@ -1213,6 +1226,7 @@ const allData = [
   [`Missing fonts`, `字体丢失`],
   [`Miter Angle`, `斜度`],
   [`Miter angle`, `斜度`],
+  [`Miter`, `斜接`],
   [`Mixed`, `多个值`],
   [`Mobile Design`, `移动端设计`],
   [`Mobile design`, `移动端设计`],
@@ -1314,6 +1328,7 @@ const allData = [
   [`Not applicable for selected text`, `不适用于选定的文本`],
   [`Not following anyone yet`, `还没有关注任何人`],
   [`Not seeing the browser tab? Go back and try again`, `没有看到浏览器选项卡？请返回并重试`],
+  [`Not used within component`, `未在组件内使用`],
   [`Nothing liked yet`, `没有点赞任何内容`],
   [`Nothing published yet`, `没有发布任何内容`],
   [`Notifications`, `通知`],
@@ -1353,6 +1368,7 @@ const allData = [
   [`Open code panel`, `打开代码面板`],
   [`Open console`, `打开控制台`],
   [`Open design panel`, `打开设计面板`],
+  [`Open file`, `打开文件`],
   [`Open files in the Desktop App from now on?`, `从现在开始都在桌面应用中打开文件吗？`],
   [`Open font settings`, `打开字体设置`],
   [`Open in App`, `应用中打开`],
@@ -1621,8 +1637,8 @@ const allData = [
   [`Resize from center`, `从中心调整大小`],
   [`Resize Proportionally`, `按比例调整大小`],
   [`Resize proportionally`, `按比例调整大小`],
-  [`Resize to Fit`, `适应内容大小`],
-  [`Resize to fit`, `适应内容大小`],
+  [`Resize to Fit`, `适应内容`],
+  [`Resize to fit`, `适应内容`],
   [`Resizing`, `调整大小`],
   [`Resolve`, `解决`],
   [`Resource use`, `资源使用情况`],
@@ -1815,19 +1831,21 @@ const allData = [
   [`Simple Kanban Template`, `简易看板模板`],
   [`Size`, `尺寸`],
   [`Skip for now`, `暂时跳过`],
-  [`Slashed Zero`, `斜杠零`],
+  [`Slant`, `倾斜`],
+  [`Slashed zero`, `斜线 0`],
   [`Slice tool`, `切片工具`],
   [`Slice`, `切片`],
   [`Slide 16:9`, `幻灯片 16:9`],
   [`Slide 4:3`, `幻灯片 4:3`],
   [`Slide in`, `滑入`],
   [`Slide out`, `滑出`],
-  [`Slow`, `缓慢`],
+  [`Slow`, `慢速`],
   [`Small caps`, `小型大写字母`],
   [`Small nudge`, `小微调`],
   [`Smart animate matching layers`, `智能动画匹配图层`],
   [`Smart animate`, `智能动画`],
   [`Smooth join selection`, `平滑连接所选项`],
+  [`SmoothShadow`, `平滑阴影`],
   [`Snap to dot grid`, `对齐到点状网格`],
   [`Snap to geometry`, `对齐到形状`],
   [`Snap to objects`, `对齐到对象`],
@@ -1888,28 +1906,28 @@ const allData = [
   [`Style`, `样式`],
   [`Styles and Components`, `样式和组件`],
   [`Stylistic Alternates`, `文体替代字形`],
-  [`Stylistic set 1`, `文体组合 1`],
-  [`Stylistic set 10`, `文体组合 10`],
-  [`Stylistic set 11`, `文体组合 11`],
-  [`Stylistic set 12`, `文体组合 12`],
-  [`Stylistic set 13`, `文体组合 13`],
-  [`Stylistic set 14`, `文体组合 14`],
-  [`Stylistic set 15`, `文体组合 15`],
-  [`Stylistic set 16`, `文体组合 16`],
-  [`Stylistic set 17`, `文体组合 17`],
-  [`Stylistic set 18`, `文体组合 18`],
-  [`Stylistic set 19`, `文体组合 19`],
-  [`Stylistic set 2`, `文体组合 2`],
-  [`Stylistic set 20`, `文体组合 20`],
-  [`Stylistic set 3`, `文体组合 3`],
-  [`Stylistic set 4`, `文体组合 4`],
-  [`Stylistic set 5`, `文体组合 5`],
-  [`Stylistic set 6`, `文体组合 6`],
-  [`Stylistic set 7`, `文体组合 7`],
-  [`Stylistic set 8`, `文体组合 8`],
-  [`Stylistic set 9`, `文体组合 9`],
-  [`Stylistic sets 1`, `文体组合 1`],
-  [`Stylistic sets`, `文体组合`],
+  [`Stylistic set 1`, `样式集 1`],
+  [`Stylistic set 10`, `样式集 10`],
+  [`Stylistic set 11`, `样式集 11`],
+  [`Stylistic set 12`, `样式集 12`],
+  [`Stylistic set 13`, `样式集 13`],
+  [`Stylistic set 14`, `样式集 14`],
+  [`Stylistic set 15`, `样式集 15`],
+  [`Stylistic set 16`, `样式集 16`],
+  [`Stylistic set 17`, `样式集 17`],
+  [`Stylistic set 18`, `样式集 18`],
+  [`Stylistic set 19`, `样式集 19`],
+  [`Stylistic set 2`, `样式集 2`],
+  [`Stylistic set 20`, `样式集 20`],
+  [`Stylistic set 3`, `样式集 3`],
+  [`Stylistic set 4`, `样式集 4`],
+  [`Stylistic set 5`, `样式集 5`],
+  [`Stylistic set 6`, `样式集 6`],
+  [`Stylistic set 7`, `样式集 7`],
+  [`Stylistic set 8`, `样式集 8`],
+  [`Stylistic set 9`, `样式集 9`],
+  [`Stylistic sets 1`, `样式集 1`],
+  [`Stylistic sets`, `样式集`],
   [`Submit feedback`, `提交反馈`],
   [`Submit`, `提交`],
   [`Subscript`, `下标`],
@@ -2043,7 +2061,7 @@ const allData = [
   [`Top right alignment`, `上右对齐`],
   [`Top right corner radius`, `上右圆角半径`],
   [`Top Right`, `上右`],
-  [`Top, right, bottom, and left padding can now be set independently.`, `现在可以独立设置顶部、右侧、底部和左侧的边距。`],
+  [`Top, right, bottom, and left padding can now be set independently.`, `现在可以单独设置顶部、右侧、底部和左侧的边距。`],
   [`Top`, `上`],
   [`Touch down`, `触摸按下`],
   [`Touch up`, `触摸离开`],
@@ -2099,6 +2117,7 @@ const allData = [
   [`Up to 15 characters (letters, numbers, or _)`, `最多 15 个字符（字母、数字或 _）`],
   [`Up to 2 editors`, `最多 2 个编辑者`],
   [`Update all`, `全部更新`],
+  [`Update the current page from`, `更新当前页面，来自`],
   [`Update`, `更新`],
   [`Updates to components or styles`, `组件或样式的更新`],
   [`Updates`, `更新`],
@@ -2141,6 +2160,7 @@ const allData = [
   [`UX Design`, `UX 设计`],
   [`Value`, `值`],
   [`Values`, `值`],
+  [`Variable`, `变形`],
   [`Variants`, `变体`],
   [`Vector networks`, `矢量网络`],
   [`Vector`, `矢量`],
@@ -2279,40 +2299,40 @@ let MutationObserverConfig = {
 
 let observer = new MutationObserver(function (mutations) {
   let treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ALL,
-    {
-      acceptNode: function (node) {
-        if (node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
-          return NodeFilter.FILTER_ACCEPT;
-        } else {
-          return NodeFilter.FILTER_SKIP;
-        }
+  document.body,
+  NodeFilter.SHOW_ALL,
+  { 
+    acceptNode: function (node) {
+      if (node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
+        return NodeFilter.FILTER_ACCEPT;
+      } else {
+        return NodeFilter.FILTER_SKIP;
       }
-    },
-    false
+    } 
+  },
+  false
   );
   let dataMap = new Map();
   allData.forEach(([key, val]) => {
-    if (key && !dataMap.has(key)) {
-      dataMap.set(key, val);
-    }
+  if (key && !dataMap.has(key)) {
+    dataMap.set(key, val);
+  }
   });
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-    if (currentNode.nodeType === 3) {
-      let key1 = currentNode.textContent;
-      if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
-    } else {
-      let key2 = currentNode.getAttribute('data-label');
-      if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
-      let key3 = currentNode.getAttribute('placeholder') || '';
-      if (key3 = key3.trim()) {
-        if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
-      }
+  if (currentNode.nodeType === 3) {
+    let key1 = currentNode.textContent;
+    if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+  } else {
+    let key2 = currentNode.getAttribute('data-label');
+    if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+    let key3 = currentNode.getAttribute('placeholder') || '';
+    if (key3 = key3.trim()) {
+      if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
     }
+  }
 
-    currentNode = treeWalker.nextNode();
+  currentNode = treeWalker.nextNode();
   }
 });
 
