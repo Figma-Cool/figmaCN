@@ -1,9 +1,14 @@
 # figmaCN
 中文 Figma 插件，设计师人工翻译校验
 
-## Chrome 商店版（支持 Chrome、Edge）
-* [https://chrome.google.com/webstore/detail/japkpjkpfdakpkbcehooampdjfgefndj](https://chrome.google.com/webstore/detail/japkpjkpfdakpkbcehooampdjfgefndj)
+## Chrome 商店版
+* 访问 [Chrome 商店](https://chrome.google.com/webstore/detail/japkpjkpfdakpkbcehooampdjfgefndj)
 * 点击「添加至 Chrome」按钮
+* 安装完成后，刷新 Figma 页面即可生效
+
+## Edge 商店版
+* 访问 [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/ogiidbjdjdppamedjpjdffjjdbnehgjc?hl=zh-CN)
+* 点击「获取」按钮
 * 安装完成后，刷新 Figma 页面即可生效
 
 ## Chrome 手动安装
