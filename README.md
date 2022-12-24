@@ -1,17 +1,27 @@
 # figmaCN
+
 中文 Figma 插件，设计师人工翻译校验
 
 ## Chrome 商店版
+
 * 访问 [Chrome 商店](https://chrome.google.com/webstore/detail/japkpjkpfdakpkbcehooampdjfgefndj)
 * 点击「添加至 Chrome」按钮
 * 安装完成后，刷新 Figma 页面即可生效
 
 ## Edge 商店版
+
 * 访问 [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/ogiidbjdjdppamedjpjdffjjdbnehgjc?hl=zh-CN)
 * 点击「获取」按钮
 * 安装完成后，刷新 Figma 页面即可生效
 
+## Firefox 附加组件社区版
+
+* 访问 [Firefox 附加组件社区](https://addons.mozilla.org/zh-CN/firefox/addon/figmacn/)
+* 点击「添加到 Firefox」按钮
+* 安装完成后，刷新 Figma 页面即可生效
+
 ## Chrome 手动安装
+
 * 点击[下载插件包](https://github.com/yancymin/figmaCN/archive/master.zip)到电脑
 * 解压到本地的文件夹
 * 打开 Chrome，在地址栏输入 `chrome://extensions` 回车，打开插件管理页面
@@ -21,6 +31,7 @@
 * 刷新 Figma 页面即可生效
 
 ## Edge 手动安装
+
 * 点击[下载插件包](https://github.com/yancymin/figmaCN/archive/master.zip)到电脑
 * 解压到本地的文件夹
 * 打开 Edge，在地址栏输入 `edge://extensions` 回车，打开插件管理页面
