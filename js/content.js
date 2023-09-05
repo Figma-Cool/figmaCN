@@ -867,6 +867,7 @@ const allData = [
   [`Duplicate to drafts`, `创建副本到草稿`],
   [`Duplicate to your Drafts`, `创建副本到我的草稿`],
   [`Duplicate to your drafts`, `创建副本到我的草稿`],
+  [`Duplicate variable`, `复制变量`],
   [`Duplicate`, `创建副本`],
   [`Duplicating...`, `正在创建副本…`],
   [`Duration`, `持续时间`],
