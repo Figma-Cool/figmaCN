@@ -2717,27 +2717,30 @@ let MutationObserverConfig = {
   characterData: true
 };
 
-let observer = new MutationObserver(function (mutations) {
-  let treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ALL,
-  { 
-    acceptNode: function (node) {
-      if (node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
-        return NodeFilter.FILTER_ACCEPT;
-      } else {
-        return NodeFilter.FILTER_SKIP;
-      }
-    } 
-  },
-  false
-  );
-  let dataMap = new Map();
-  allData.forEach(([key, val]) => {
+
+// 初始化时转换一次翻译数组格式，避免 MutationObserver 触发时重复转换
+const dataMap = new Map();
+allData.forEach(([key, val]) => {
   if (key && !dataMap.has(key)) {
     dataMap.set(key, val);
   }
-  });
+});
+
+let observer = new MutationObserver(function (mutations) {
+  let treeWalker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_ALL,
+    { 
+      acceptNode: function (node) {
+        if (node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
+          return NodeFilter.FILTER_ACCEPT;
+        } else {
+          return NodeFilter.FILTER_SKIP;
+        }
+      } 
+    },
+    false
+  );
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
   if (currentNode.nodeType === 3) {
