@@ -2717,7 +2717,6 @@ let MutationObserverConfig = {
   characterData: true
 };
 
-
 // 初始化时转换一次翻译数组格式，避免 MutationObserver 触发时重复转换
 const dataMap = new Map();
 allData.forEach(([key, val]) => {
@@ -2726,13 +2725,17 @@ allData.forEach(([key, val]) => {
   }
 });
 
+const DOM_NODE_TYPE = {
+  TEXT_NODE: 3,
+}
+
 let observer = new MutationObserver(function (mutations) {
   let treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ALL,
     { 
       acceptNode: function (node) {
-        if (node.nodeType === 3 || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
+        if (node.nodeType === DOM_NODE_TYPE.TEXT_NODE || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
           return NodeFilter.FILTER_ACCEPT;
         } else {
           return NodeFilter.FILTER_SKIP;
@@ -2743,7 +2746,7 @@ let observer = new MutationObserver(function (mutations) {
   );
   let currentNode = treeWalker.currentNode;
   while (currentNode) {
-  if (currentNode.nodeType === 3) {
+  if (currentNode.nodeType === DOM_NODE_TYPE.TEXT_NODE) {
     let key1 = currentNode.textContent;
     if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
   } else {
