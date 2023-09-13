@@ -2734,11 +2734,17 @@ let observer = new MutationObserver(function (mutations) {
     NodeFilter.SHOW_ALL,
     { 
       acceptNode: function (node) {
+        // 跳过 local variable 设置面板中的的名称节点，避免 local variable 里面的名称被翻译
+        const nodeUnderVariableInput = node.classList && node.classList.value.includes('variable_name--root');
+        if (nodeUnderVariableInput) {
+          // 这个节点以下的子节点（包括该节点）全部过滤掉
+          return NodeFilter.FILTER_REJECT;
+        }
+
         const nodeIsTextNode = node.nodeType === DOM_NODE_TYPE.TEXT_NODE;
         if (nodeIsTextNode) return NodeFilter.FILTER_ACCEPT;
 
         if (typeof node.hasAttribute !== 'function') return NodeFilter.FILTER_SKIP;
-
         const nodeHasTargetTextAttribute = node.hasAttribute('data-label') || node.hasAttribute('placeholder');
         return nodeHasTargetTextAttribute
           ? NodeFilter.FILTER_ACCEPT
