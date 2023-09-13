@@ -2708,7 +2708,6 @@ const allData = [
   [`Zoom`, `缩放`],
 ]
 
-
 let MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 let MutationObserverConfig = {
   childList: true,
@@ -2735,30 +2734,37 @@ let observer = new MutationObserver(function (mutations) {
     NodeFilter.SHOW_ALL,
     { 
       acceptNode: function (node) {
-        if (node.nodeType === DOM_NODE_TYPE.TEXT_NODE || (node.hasAttribute && (node.hasAttribute('data-label') || node.hasAttribute('placeholder')))) {
-          return NodeFilter.FILTER_ACCEPT;
-        } else {
-          return NodeFilter.FILTER_SKIP;
-        }
+        const nodeIsTextNode = node.nodeType === DOM_NODE_TYPE.TEXT_NODE;
+        if (nodeIsTextNode) return NodeFilter.FILTER_ACCEPT;
+
+        if (typeof node.hasAttribute !== 'function') return NodeFilter.FILTER_SKIP;
+
+        const nodeHasTargetTextAttribute = node.hasAttribute('data-label') || node.hasAttribute('placeholder');
+        return nodeHasTargetTextAttribute
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_SKIP;
       } 
     },
     false
   );
-  let currentNode = treeWalker.currentNode;
-  while (currentNode) {
-  if (currentNode.nodeType === DOM_NODE_TYPE.TEXT_NODE) {
-    let key1 = currentNode.textContent;
-    if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
-  } else {
-    let key2 = currentNode.getAttribute('data-label');
-    if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
-    let key3 = currentNode.getAttribute('placeholder') || '';
-    if (key3 = key3.trim()) {
-      if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
-    }
-  }
 
-  currentNode = treeWalker.nextNode();
+  let currentNode = treeWalker.currentNode;
+
+  while (currentNode) {
+    if (currentNode.nodeType === DOM_NODE_TYPE.TEXT_NODE) {
+      let key1 = currentNode.textContent;
+      if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+    } else {
+      let key2 = currentNode.getAttribute('data-label');
+      if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+
+      let key3 = currentNode.getAttribute('placeholder') || '';
+      if (key3 = key3.trim()) {
+        if (dataMap.has(key3)) currentNode.setAttribute('placeholder', dataMap.get(key3));
+      }
+    }
+
+    currentNode = treeWalker.nextNode();
   }
 });
 
