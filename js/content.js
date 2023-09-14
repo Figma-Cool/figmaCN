@@ -2734,7 +2734,11 @@ let observer = new MutationObserver(function (mutations) {
     NodeFilter.SHOW_ALL,
     { 
       acceptNode: function (node) {
-        // 跳过 local variable 设置面板中的的名称节点，避免 local variable 里面的名称被翻译
+        /**
+         * [issue](https://github.com/Figma-Cool/figmaCN/issues/143)
+         * 
+         * 跳过 local variable 设置面板中的的名称节点，避免 local variable 里面的名称被翻译
+         */
         const nodeUnderVariableInput = node.classList && node.classList.value.includes('variable_name--root');
         if (nodeUnderVariableInput) {
           // 这个节点以下的子节点（包括该节点）全部过滤掉
