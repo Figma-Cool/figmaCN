@@ -1785,6 +1785,8 @@ const allData = [
   [`Plugins unavailable.`, `插件不可用`],
   [`Plugins unavailable`, `插件不可用`],
   [`Plugins`, `插件`],
+  [`Plus darker`, `加暗`],
+  [`Plus lighter`, `提亮`],
   [`Polls, games, charts, and more`, `投票、游戏、图表等`],
   [`Polygon`, `多边形`],
   [`Popular fonts`, `流行字体`],
