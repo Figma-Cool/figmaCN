@@ -1570,6 +1570,9 @@ const allData = [
   [`Multiplayer`, `多用户`],
   [`Multiply`, `正片叠底`],
   [`Mute sound for yourself`, `为自己静音`],
+  [`Multi-editing`, `多重编辑`],
+  [`Multi-edit variants`, `对变体多重编辑`],
+  [`Multi-edit text`: `对文本多重编辑`,],
   [`Name duplicated`, `名称重复`],
   [`Name this version`, `给这个版本命名`],
   [`Name your team`, `为团队命名`],
@@ -2347,6 +2350,7 @@ const allData = [
   [`Sticky note`, `便利贴`],
   [`Stiffness`, `刚度`],
   [`Stop`, `停止`],
+  [`Stop multi-editing`, `停止多重编辑`]
   [`Straight connector or line`, `直线化连线和直线`],
   [`Straight line`, `直线`],
   [`Straight`, `直线`],
