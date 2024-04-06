@@ -1581,7 +1581,7 @@ const allData = [
   [`Mute sound for yourself`, `为自己静音`],
   [`Multi-editing`, `多重编辑`],
   [`Multi-edit variants`, `对变体多重编辑`],
-  [`Multi-edit text`: `对文本多重编辑`,],
+  [`Multi-edit text`, `对文本多重编辑`],
   [`Name duplicated`, `名称重复`],
   [`Name this version`, `给这个版本命名`],
   [`Name your team`, `为团队命名`],
