@@ -22,7 +22,7 @@
 
 ## Chrome 手动安装
 
-* 点击[下载插件包](https://github.com/yancymin/figmaCN/archive/master.zip)到电脑
+* 点击[下载插件包](https://github.com/Figma-Cool/figmaCN/releases)到电脑
 * 解压到本地的文件夹
 * 打开 Chrome，在地址栏输入 `chrome://extensions` 回车，打开插件管理页面
 * 打开右上角「开发者模式」开关
@@ -32,7 +32,7 @@
 
 ## Edge 手动安装
 
-* 点击[下载插件包](https://github.com/yancymin/figmaCN/archive/master.zip)到电脑
+* 点击[下载插件包](https://github.com/Figma-Cool/figmaCN/releases)到电脑
 * 解压到本地的文件夹
 * 打开 Edge，在地址栏输入 `edge://extensions` 回车，打开插件管理页面
 * 打开左下角「开发人员模式」开关
