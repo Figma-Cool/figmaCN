@@ -1922,6 +1922,7 @@ const allData = [
   [`Other teams`, `其他团队`],
   [`Other`, `其他`],
   [`Others`, `其他人`],
+  [`Others in this deck`, `选中元素的其它色板`],
   [`Our story`, `我们的故事`],
   [`Outer Border`, `外边框`],
   [`Outline stroke`, `轮廓化描边`],
