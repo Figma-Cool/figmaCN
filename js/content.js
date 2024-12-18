@@ -249,6 +249,7 @@ const allData = [
   [`Add export settings`, `添加导出设置`],
   [`Add fill`, `添加填充`],
   [`Add Instagram handle`, `添加 Instagram 账号`],
+  [`Add interactions`, `添加交互`],
   [`Add layout grid`, `添加布局网格`],
   [`Add link`, `添加链接`],
   [`Add mention`, `添加提及`],
