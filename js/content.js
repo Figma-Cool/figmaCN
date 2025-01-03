@@ -1492,6 +1492,7 @@ const allData = [
   [`Invites and requests`, `邀请和请求`],
   [`Isolated Forms`, `单独形式`],
   [`Italic`, `斜体`],
+  [`Item added to your sidebar`, `项目已添加到你的侧边栏`],
   [`Job title`, `职位`],
   [`Join beta`, `加入测试版`],
   [`Join selection`, `连接所选项`],
