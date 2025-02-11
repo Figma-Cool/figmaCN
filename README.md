@@ -1,4 +1,4 @@
-# figmaCN
+# FigmaCN
 
 中文 Figma 插件，设计师人工翻译校验
 
