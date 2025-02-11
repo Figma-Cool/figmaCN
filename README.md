@@ -1,6 +1,10 @@
-# figmaCN
+![image](https://github.com/user-attachments/assets/7fa702de-c431-4887-9dac-85c93e044894)# figmaCN
 
 中文 Figma 插件，设计师人工翻译校验
+
+## 油猴脚本版
+
+* 访问 [油猴脚本商店](https://greasyfork.org/zh-CN/scripts/526503)
 
 ## Chrome 商店版
 
