@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7fa702de-c431-4887-9dac-85c93e044894)# figmaCN
+# figmaCN
 
 中文 Figma 插件，设计师人工翻译校验
 
