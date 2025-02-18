@@ -1196,6 +1196,7 @@ const allData = [
   [`File import failed`, `文件导入失败`],
   [`File imported successfully`, `文件导入成功`],
   [`File is temporarily view-only`, `文件暂时只允许查看`],
+  [`File moved to trash`, `文件已移动到回收站`],
   [`File Name: `, `文件名：`],
   [`File name`, `文件名`],
   [`File not found`, `找不到文件`],
