@@ -2982,6 +2982,7 @@ const allData = [
   [`Unlimited`, `无限制`],
   [`Unlink from styles to customize mixed contents.`, `取消链接样式，可自定义多个内容。`],
   [`Unlock all objects`, `解锁全部对象`],
+  [`Unlock aspect ratio`, `解锁宽高比`],
   [`Unmute sound for yourself`, `取消为自己静音`],
   [`Unpublish`, `取消发布`],
   [`Unread`, `未读`],
