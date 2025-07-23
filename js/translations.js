@@ -2508,7 +2508,7 @@ const translations = [
   [`Search in Community`, `在社区中搜索`],
   [`Search members…`, `搜索成员…`],
   [`Search menus, commands, and plugins`, `搜索菜单、命令和插件`],
-  [`Search templates`, `搜索模板`],
+  [`Search templates and tools`, `搜索模板和工具`],
   [`Search the Figma Community`, `搜索 Figma 社区`],
   [`Search through all of Figma’s commands`, `搜索 Figma 的全部命令`],
   [`Search through menus, commands, and plugins`, `搜索菜单、命令和插件`],
