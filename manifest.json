@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "FigmaCN",
   "short_name": "FigmaCN",
   "description": "中文 Figma 插件，设计师人工翻译校验。",
@@ -23,11 +23,15 @@
     }
   ],
   "background": {
-    "scripts": [
-      "js/background.js"
-    ]
+    "service_worker": "js/background.js"
   },
   "web_accessible_resources": [
-    "js/translations.js"
+    {
+      "resources": ["js/translations.js"],
+      "matches": ["*://*.figma.com/*"]
+    }
+  ],
+  "host_permissions": [
+    "*://*.figma.com/*"
   ]
 }
