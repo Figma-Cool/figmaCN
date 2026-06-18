@@ -27,7 +27,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["js/translations.js"],
+      "resources": ["js/translations.json"],
       "matches": ["*://*.figma.com/*"]
     }
   ],
