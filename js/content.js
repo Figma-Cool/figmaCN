@@ -1,14 +1,12 @@
 // 引入翻译数据
-// 使用 fetch 方式加载翻译数据
+// 使用 fetch 方式加载 JSON 格式的翻译数据
 
 async function loadTranslationData() {
   try {
-    const response = await fetch(chrome.runtime.getURL('js/translations.js'));
-    const scriptText = await response.text();
+    const response = await fetch(chrome.runtime.getURL('js/translations.json'));
 
-    // 执行脚本并提取翻译数据
-    const func = new Function(scriptText + '; return translations;');
-    const allData = func();
+    // 直接解析为 JSON，避免 eval / new Function
+    const allData = await response.json();
 
     initializeTranslation(allData);
   } catch (error) {
