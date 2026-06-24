@@ -3861,5 +3861,9 @@
   ["Set up agents", "设置 Agent"],
   ["All collections", "所有集合"],
   ["Export modes", "导出模式"],
-  ["No libraries here-yet", "这里还没有组件库"]
+  ["Your local fonts are now available to use", "您的本地字体现已可用"],
+  ["Your uploaded fonts", "您上传的字体"],
+  ["Upload fonts for your personal use with a paid plan.", "付费计划可上传字体供个人使用。"],
+  ["Build this with code", "用代码构建此内容"],
+  ["Ignore auto layout", "忽略自动布局"]
 ]

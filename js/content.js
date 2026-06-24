@@ -1,4 +1,5 @@
-// FigmaCN v1.6.0 - 2026-06-22
+// FigmaCN v1.6.0 - 2026-06-23
+console.log('[FigmaCN] content.js loaded');
 // 引入翻译数据
 // 使用 fetch 方式加载 JSON 格式的翻译数据
 
@@ -117,6 +118,10 @@ function initializeTranslation(allData) {
           if (nodeIsTextNode) return NodeFilter.FILTER_ACCEPT;
 
           if (typeof node.hasAttribute !== 'function') return NodeFilter.FILTER_SKIP;
+
+          // 接受 Figma <i18n-text> 元素以便翻译其内文
+          if (node.tagName === 'I18N-TEXT') return NodeFilter.FILTER_ACCEPT;
+
           const nodeHasTargetTextAttribute = node.hasAttribute('data-label') || node.hasAttribute('placeholder');
           return nodeHasTargetTextAttribute
             ? NodeFilter.FILTER_ACCEPT
@@ -161,6 +166,33 @@ function initializeTranslation(allData) {
           }
         }
       } else {
+        // 处理 Figma 自定义的 <i18n-text> 元素（其文字不在属性中，而是 textContent）
+        if (!isNodeInCodeEditor(currentNode) && currentNode.tagName === 'I18N-TEXT') {
+          let key4 = currentNode.textContent;
+          if (dataMap.has(key4)) {
+            currentNode.textContent = dataMap.get(key4);
+          } else if (patternEntries.length > 0) {
+            for (const { regex, template } of patternEntries) {
+              const match = key4.match(regex);
+              if (match) {
+                let result = template;
+                const hasNumbered = /\{[1-9]\d*\}/.test(result);
+                if (hasNumbered) {
+                  for (let i = 1; i < match.length; i++) {
+                    result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+                  }
+                } else {
+                  for (let i = 1; i < match.length; i++) {
+                    result = result.replace('{@}', match[i]);
+                  }
+                }
+                currentNode.textContent = applyExactMatches(result);
+                break;
+              }
+            }
+          }
+        }
+
         // 同样检查属性节点
         if (!isNodeInCodeEditor(currentNode)) {
           let key2 = currentNode.getAttribute('data-label');
@@ -223,4 +255,57 @@ function initializeTranslation(allData) {
   });
 
   observer.observe(document.body, MutationObserverConfig);
+
+  // 独立处理 Figma 的 <i18n-text> 自定义元素（不受 TreeWalker acceptNode 影响）
+  function translateI18nText(el) {
+    let text = el.textContent;
+    if (dataMap.has(text)) {
+      el.textContent = dataMap.get(text);
+    } else if (patternEntries.length > 0) {
+      for (const { regex, template } of patternEntries) {
+        const match = text.match(regex);
+        if (match) {
+          let result = template;
+          const hasNumbered = /\{[1-9]\d*\}/.test(result);
+          if (hasNumbered) {
+            for (let i = 1; i < match.length; i++) {
+              result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+            }
+          } else {
+            for (let i = 1; i < match.length; i++) {
+              result = result.replace('{@}', match[i]);
+            }
+          }
+          el.textContent = applyExactMatches(result);
+          break;
+        }
+      }
+    }
+  }
+
+  // 翻译已有的 <i18n-text>
+  document.querySelectorAll('i18n-text').forEach(translateI18nText);
+
+  // 监听新增的 <i18n-text>
+  new MutationObserver(function (mutations) {
+    for (const m of mutations) {
+      for (const node of m.addedNodes) {
+        if (node.nodeType === 1 && node.tagName === 'I18N-TEXT') {
+          translateI18nText(node);
+        } else if (node.nodeType === 1 && node.querySelectorAll) {
+          node.querySelectorAll('i18n-text').forEach(translateI18nText);
+        }
+      }
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+
+  // 同样监听 i18n-text 的文字变化（characterData）
+  new MutationObserver(function (mutations) {
+    for (const m of mutations) {
+      const el = m.target.parentElement;
+      if (el && el.tagName === 'I18N-TEXT') {
+        translateI18nText(el);
+      }
+    }
+  }).observe(document.body, { characterData: true, subtree: true });
 }
