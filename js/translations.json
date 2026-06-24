@@ -3917,5 +3917,16 @@
   ["Shared with", "共享对象"],
   ["You directly", "直接与您"],
   ["Only shared resources", "仅共享资源"],
-  ["Enable browser notifications", "启用浏览器通知"]
+  ["Enable browser notifications", "启用浏览器通知"],
+  ["{@} more", "还有 {1} 个"],
+  ["Edited {@} hours ago", "编辑于 {1} 小时前"],
+  ["Download all icons", "下载所有图标"],
+  ["Icon download settings…", "图标下载设置…"],
+  ["Selection details", "所选内容详情"],
+  ["Session activity", "会话活动"],
+  ["Not sent", "未发送"],
+  ["Estimated tokens", "预计 token 数"],
+  ["Copy example prompt", "复制示例提示词"],
+  ["Add Figma to your agentic coding tool", "将 Figma 添加到你的智能体编码工具中"],
+  ["Border colors", "边框颜色"]
 ]

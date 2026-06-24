@@ -75,6 +75,24 @@ function initializeTranslation(allData) {
     return false;
   }
 
+  function isNodeInVariableNameArea(node) {
+    let currentElement = node.nodeType === DOM_NODE_TYPE.TEXT_NODE ? node.parentElement : node;
+
+    while (currentElement && currentElement !== document.body) {
+      if (currentElement.classList && currentElement.classList.value.includes('variable_name--root')) {
+        return true;
+      }
+
+      currentElement = currentElement.parentElement;
+    }
+
+    return false;
+  }
+
+  function shouldSkipTranslation(node) {
+    return isNodeInCodeEditor(node) || isNodeInVariableNameArea(node);
+  }
+
   // 对模式匹配结果再做精确匹配兜底（如 Education→教育版、Jul→7）
   function applyExactMatches(text) {
     let result = text;
@@ -110,7 +128,7 @@ function initializeTranslation(allData) {
            * 只在文本节点和元素节点上调用 isNodeInCodeEditor，其他节点类型（注释、脚本等）没有 getAttribute 方法
            */
           if (nodeIsTextNode || typeof node.hasAttribute === 'function') {
-            if (isNodeInCodeEditor(node)) {
+            if (shouldSkipTranslation(node)) {
               return NodeFilter.FILTER_REJECT;
             }
           }
@@ -136,7 +154,7 @@ function initializeTranslation(allData) {
     while (currentNode) {
       if (currentNode.nodeType === DOM_NODE_TYPE.TEXT_NODE) {
         // 在替换前再检查一次是否在代码编辑器内
-        if (!isNodeInCodeEditor(currentNode)) {
+        if (!shouldSkipTranslation(currentNode)) {
           let key1 = currentNode.textContent;
           // 先尝试精确匹配
           if (dataMap.has(key1)) {
@@ -167,7 +185,7 @@ function initializeTranslation(allData) {
         }
       } else {
         // 处理 Figma 自定义的 <i18n-text> 元素（其文字不在属性中，而是 textContent）
-        if (!isNodeInCodeEditor(currentNode) && currentNode.tagName === 'I18N-TEXT') {
+        if (!shouldSkipTranslation(currentNode) && currentNode.tagName === 'I18N-TEXT') {
           let key4 = currentNode.textContent;
           if (dataMap.has(key4)) {
             currentNode.textContent = dataMap.get(key4);
@@ -194,7 +212,7 @@ function initializeTranslation(allData) {
         }
 
         // 同样检查属性节点
-        if (!isNodeInCodeEditor(currentNode)) {
+        if (!shouldSkipTranslation(currentNode)) {
           let key2 = currentNode.getAttribute('data-label');
           if (key2) {
             if (dataMap.has(key2)) {
@@ -258,6 +276,10 @@ function initializeTranslation(allData) {
 
   // 独立处理 Figma 的 <i18n-text> 自定义元素（不受 TreeWalker acceptNode 影响）
   function translateI18nText(el) {
+    if (shouldSkipTranslation(el)) {
+      return;
+    }
+
     let text = el.textContent;
     if (dataMap.has(text)) {
       el.textContent = dataMap.get(text);
