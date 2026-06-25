@@ -1,0 +1,77 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: '要发布的版本号（如 1.6.0）'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 构建三端扩展包
+        run: node scripts/build.mjs
+
+      - name: 解析版本号
+        id: vars
+        run: |
+          if [ -n "${{ github.event.inputs.tag }}" ]; then
+            VERSION="${{ github.event.inputs.tag }}"
+          else
+            # 去掉 tag 前缀 v
+            VERSION="${GITHUB_REF_NAME#v}"
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "解析到的版本号: $VERSION"
+
+      - name: 打包 zip
+        run: |
+          cd dist
+          zip -r "../FigmaCN-chromium-${{ steps.vars.outputs.version }}.zip" chromium
+          zip -r "../FigmaCN-firefox-${{ steps.vars.outputs.version }}.zip" firefox
+
+      - name: 生成更新信息
+        id: notes
+        run: |
+          # 从 manifest 取版本号，从最近 git log 取更新要点
+          {
+            echo "## FigmaCN v${{ steps.vars.outputs.version }}"
+            echo ""
+            echo "### 安装方式"
+            echo "- **Chrome / Edge**：下载 \`FigmaCN-chromium-${{ steps.vars.outputs.version }}.zip\`，解压后在 \`chrome://extensions\`（或 \`edge://extensions\`）开启开发者模式，点击「加载已解压的扩展程序」选择解压目录。"
+            echo "- **Firefox**：下载 \`FigmaCN-firefox-${{ steps.vars.outputs.version }}.zip\`，临时安装可在 \`about:debugging\` → 此 Firefox → 临时载入附加组件，选择 manifest.json。"
+            echo ""
+            echo "### 本次更新（自上一个 tag）"
+            echo ""
+            git log --pretty=format:'- %s' $(git describe --tags --abbrev=0 HEAD^ 2>/dev/null)..HEAD > body.txt || \
+              git log --pretty=format:'- %s' -n 20 >> body.txt
+            cat body.txt
+            echo ""
+          } > release_notes.md
+          echo "##[file]release_notes.md"
+
+      - name: 上传到 GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: FigmaCN v${{ steps.vars.outputs.version }}
+          body_path: release_notes.md
+          tag_name: ${{ github.event.inputs.tag && format('v{0}', github.event.inputs.tag) || github.ref_name }}
+          files: |
+            FigmaCN-chromium-${{ steps.vars.outputs.version }}.zip
+            FigmaCN-firefox-${{ steps.vars.outputs.version }}.zip
