@@ -1,3 +1,5 @@
+// FigmaCN v1.6.0 - 2026-06-23
+console.log('[FigmaCN] content.js loaded');
 // 引入翻译数据
 // 使用 fetch 方式加载 JSON 格式的翻译数据
 
@@ -29,11 +31,25 @@ function initializeTranslation(allData) {
 
   // 初始化时转换一次翻译数组格式，避免 MutationObserver 触发时重复转换
   const dataMap = new Map();
+  const patternEntries = []; // {@} 通配符模式匹配
   allData.forEach(([key, val]) => {
     if (key && !dataMap.has(key)) {
-      dataMap.set(key, val);
+      if (key.includes('{@}')) {
+        // 将 {@} 转换为正则捕获组，整串精确匹配
+        // 注意顺序：先保护 {@} 再转义，避免花括号先被转义导致 {@} 无法替换
+        const escaped = key
+          .replace(/\{@\}/g, '\x00HOLDER\x00')
+          .replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+          .replace(/\x00HOLDER\x00/g, '(.+)');
+        patternEntries.push({ regex: new RegExp('^' + escaped + '$'), template: val });
+      } else {
+        dataMap.set(key, val);
+      }
     }
   });
+
+  // 按 key 长度降序排序，确保 applyExactMatches 时长词条优先匹配（避免 "Edu" 先于 "Education" 命中）
+  const sortedExactEntries = [...dataMap.entries()].sort((a, b) => b[0].length - a[0].length);
 
   const DOM_NODE_TYPE = {
     TEXT_NODE: 3,
@@ -44,6 +60,10 @@ function initializeTranslation(allData) {
     let currentElement = node.nodeType === DOM_NODE_TYPE.TEXT_NODE ? node.parentElement : node;
     
     while (currentElement && currentElement !== document.body) {
+      // 跳过非元素节点（如注释节点），它们没有 getAttribute 方法
+      if (typeof currentElement.getAttribute !== 'function') {
+        return false;
+      }
       // 检测 translate="no" 属性 - 这是代码编辑器的标记
       if (currentElement.getAttribute('translate') === 'no') {
         return true;
@@ -53,6 +73,35 @@ function initializeTranslation(allData) {
     }
     
     return false;
+  }
+
+  function isNodeInVariableNameArea(node) {
+    let currentElement = node.nodeType === DOM_NODE_TYPE.TEXT_NODE ? node.parentElement : node;
+
+    while (currentElement && currentElement !== document.body) {
+      if (currentElement.classList && currentElement.classList.value.includes('variable_name--root')) {
+        return true;
+      }
+
+      currentElement = currentElement.parentElement;
+    }
+
+    return false;
+  }
+
+  function shouldSkipTranslation(node) {
+    return isNodeInCodeEditor(node) || isNodeInVariableNameArea(node);
+  }
+
+  // 对模式匹配结果再做精确匹配兜底（如 Education→教育版、Jul→7）
+  function applyExactMatches(text) {
+    let result = text;
+    for (const [exactKey, exactVal] of sortedExactEntries) {
+      if (exactKey.length > 1 && result.includes(exactKey)) {
+        result = result.replace(exactKey, exactVal);
+      }
+    }
+    return result;
   }
 
   let observer = new MutationObserver(function (mutations) {
@@ -72,17 +121,25 @@ function initializeTranslation(allData) {
             return NodeFilter.FILTER_REJECT;
           }
 
+          const nodeIsTextNode = node.nodeType === DOM_NODE_TYPE.TEXT_NODE;
+
           /**
            * 跳过代码编辑器中的内容，避免代码关键字如 export 被翻译
+           * 只在文本节点和元素节点上调用 isNodeInCodeEditor，其他节点类型（注释、脚本等）没有 getAttribute 方法
            */
-          if (isNodeInCodeEditor(node)) {
-            return NodeFilter.FILTER_REJECT;
+          if (nodeIsTextNode || typeof node.hasAttribute === 'function') {
+            if (shouldSkipTranslation(node)) {
+              return NodeFilter.FILTER_REJECT;
+            }
           }
 
-          const nodeIsTextNode = node.nodeType === DOM_NODE_TYPE.TEXT_NODE;
           if (nodeIsTextNode) return NodeFilter.FILTER_ACCEPT;
 
           if (typeof node.hasAttribute !== 'function') return NodeFilter.FILTER_SKIP;
+
+          // 接受 Figma <i18n-text> 元素以便翻译其内文
+          if (node.tagName === 'I18N-TEXT') return NodeFilter.FILTER_ACCEPT;
+
           const nodeHasTargetTextAttribute = node.hasAttribute('data-label') || node.hasAttribute('placeholder');
           return nodeHasTargetTextAttribute
             ? NodeFilter.FILTER_ACCEPT
@@ -97,20 +154,116 @@ function initializeTranslation(allData) {
     while (currentNode) {
       if (currentNode.nodeType === DOM_NODE_TYPE.TEXT_NODE) {
         // 在替换前再检查一次是否在代码编辑器内
-        if (!isNodeInCodeEditor(currentNode)) {
+        if (!shouldSkipTranslation(currentNode)) {
           let key1 = currentNode.textContent;
-          if (dataMap.has(key1)) currentNode.textContent = dataMap.get(key1);
+          // 先尝试精确匹配
+          if (dataMap.has(key1)) {
+            currentNode.textContent = dataMap.get(key1);
+          } else if (patternEntries.length > 0) {
+            // 兜底：尝试 {@} 通配符模式匹配
+            for (const { regex, template } of patternEntries) {
+              const match = key1.match(regex);
+              if (match) {
+                let result = template;
+                const hasNumbered = /\{[1-9]\d*\}/.test(result);
+                if (hasNumbered) {
+                  // 使用编号占位符 {1} {2} {3} ... 支持语序调整
+                  for (let i = 1; i < match.length; i++) {
+                    result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+                  }
+                } else {
+                  // 兼容旧格式：按顺序替换 {@}
+                  for (let i = 1; i < match.length; i++) {
+                    result = result.replace('{@}', match[i]);
+                  }
+                }
+                currentNode.textContent = applyExactMatches(result);
+                break;
+              }
+            }
+          }
         }
       } else {
+        // 处理 Figma 自定义的 <i18n-text> 元素（其文字不在属性中，而是 textContent）
+        if (!shouldSkipTranslation(currentNode) && currentNode.tagName === 'I18N-TEXT') {
+          let key4 = currentNode.textContent;
+          if (dataMap.has(key4)) {
+            currentNode.textContent = dataMap.get(key4);
+          } else if (patternEntries.length > 0) {
+            for (const { regex, template } of patternEntries) {
+              const match = key4.match(regex);
+              if (match) {
+                let result = template;
+                const hasNumbered = /\{[1-9]\d*\}/.test(result);
+                if (hasNumbered) {
+                  for (let i = 1; i < match.length; i++) {
+                    result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+                  }
+                } else {
+                  for (let i = 1; i < match.length; i++) {
+                    result = result.replace('{@}', match[i]);
+                  }
+                }
+                currentNode.textContent = applyExactMatches(result);
+                break;
+              }
+            }
+          }
+        }
+
         // 同样检查属性节点
-        if (!isNodeInCodeEditor(currentNode)) {
+        if (!shouldSkipTranslation(currentNode)) {
           let key2 = currentNode.getAttribute('data-label');
-          if (key2 && dataMap.has(key2)) currentNode.setAttribute('data-label', dataMap.get(key2));
+          if (key2) {
+            if (dataMap.has(key2)) {
+              currentNode.setAttribute('data-label', dataMap.get(key2));
+            } else if (patternEntries.length > 0) {
+              for (const { regex, template } of patternEntries) {
+                const match = key2.match(regex);
+                if (match) {
+                  let result = template;
+                  const hasNumbered = /\{[1-9]\d*\}/.test(result);
+                  if (hasNumbered) {
+                    for (let i = 1; i < match.length; i++) {
+                      result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+                    }
+                  } else {
+                    for (let i = 1; i < match.length; i++) {
+                      result = result.replace('{@}', match[i]);
+                    }
+                  }
+                  currentNode.setAttribute('data-label', applyExactMatches(result));
+                  break;
+                }
+              }
+            }
+          }
 
           let key3 = currentNode.getAttribute('placeholder') || '';
           const trimmedKey3 = key3.trim();
-          if (trimmedKey3 && dataMap.has(trimmedKey3)) {
-            currentNode.setAttribute('placeholder', dataMap.get(trimmedKey3));
+          if (trimmedKey3) {
+            if (dataMap.has(trimmedKey3)) {
+              currentNode.setAttribute('placeholder', dataMap.get(trimmedKey3));
+            } else if (patternEntries.length > 0) {
+              for (const { regex, template } of patternEntries) {
+                const match = trimmedKey3.match(regex);
+                if (match) {
+                  let result = template;
+                  const hasNumbered = /\{[1-9]\d*\}/.test(result);
+                  if (hasNumbered) {
+                    for (let i = 1; i < match.length; i++) {
+                      result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+                    }
+                  } else {
+                    for (let i = 1; i < match.length; i++) {
+                      result = result.replace('{@}', match[i]);
+                    }
+                  }
+                  currentNode.setAttribute('placeholder', applyExactMatches(result));
+                  break;
+                }
+              }
+            }
           }
         }
       }
@@ -120,4 +273,61 @@ function initializeTranslation(allData) {
   });
 
   observer.observe(document.body, MutationObserverConfig);
+
+  // 独立处理 Figma 的 <i18n-text> 自定义元素（不受 TreeWalker acceptNode 影响）
+  function translateI18nText(el) {
+    if (shouldSkipTranslation(el)) {
+      return;
+    }
+
+    let text = el.textContent;
+    if (dataMap.has(text)) {
+      el.textContent = dataMap.get(text);
+    } else if (patternEntries.length > 0) {
+      for (const { regex, template } of patternEntries) {
+        const match = text.match(regex);
+        if (match) {
+          let result = template;
+          const hasNumbered = /\{[1-9]\d*\}/.test(result);
+          if (hasNumbered) {
+            for (let i = 1; i < match.length; i++) {
+              result = result.replace(new RegExp(`\\{${i}\\}`, 'g'), match[i]);
+            }
+          } else {
+            for (let i = 1; i < match.length; i++) {
+              result = result.replace('{@}', match[i]);
+            }
+          }
+          el.textContent = applyExactMatches(result);
+          break;
+        }
+      }
+    }
+  }
+
+  // 翻译已有的 <i18n-text>
+  document.querySelectorAll('i18n-text').forEach(translateI18nText);
+
+  // 监听新增的 <i18n-text>
+  new MutationObserver(function (mutations) {
+    for (const m of mutations) {
+      for (const node of m.addedNodes) {
+        if (node.nodeType === 1 && node.tagName === 'I18N-TEXT') {
+          translateI18nText(node);
+        } else if (node.nodeType === 1 && node.querySelectorAll) {
+          node.querySelectorAll('i18n-text').forEach(translateI18nText);
+        }
+      }
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+
+  // 同样监听 i18n-text 的文字变化（characterData）
+  new MutationObserver(function (mutations) {
+    for (const m of mutations) {
+      const el = m.target.parentElement;
+      if (el && el.tagName === 'I18N-TEXT') {
+        translateI18nText(el);
+      }
+    }
+  }).observe(document.body, { characterData: true, subtree: true });
 }
