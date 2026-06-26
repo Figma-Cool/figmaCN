@@ -4120,5 +4120,6 @@
   ["Fade In", "淡入"],
   ["Fade Out", "淡出"],
   ["Bezier", "贝塞尔"],
-  ["Bounce", "弹性"]
+  ["Bounce", "弹性"],
+  ["Timeline zoom level", "时间线缩放级别"]
 ]
