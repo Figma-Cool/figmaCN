@@ -4038,5 +4038,8 @@
   ["Zoom to previous frame", "缩放至上一个画框"],
   ["Zoom to selection", "缩放至选中范围"],
   ["Zoom", "缩放"],
-  ["Zoom/view options", "缩放/视图选项"]
+  ["Zoom/view options", "缩放/视图选项"],
+  ["Stroke paint", "描边颜色"],
+  ["Stroke weight", "描边粗细"],
+  ["Remove annotations", "删除标注"]
 ]
