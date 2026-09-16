@@ -128,6 +128,15 @@ function initializeTranslation(allData) {
   }
 
   function shouldSkipTranslation(node) {
+    // i18n-text 由外层一次性翻译，避免内部文本节点被拆开替换后混入中英文。
+    if (node.nodeType === DOM_NODE_TYPE.TEXT_NODE) {
+      let parent = node.parentElement;
+      while (parent && parent !== document.body) {
+        if (parent.tagName === 'I18N-TEXT') return true;
+        parent = parent.parentElement;
+      }
+    }
+
     // 命中缓存：当前节点位于上次标记的跳过根节点之内，直接跳过
     if (skipRootCache && skipRootCache.contains(node)) {
       if (node === skipRootCache && isEditableRoot(node)) return false;
@@ -144,7 +153,8 @@ function initializeTranslation(allData) {
   function applyExactMatches(text) {
     let result = text;
     for (const [exactKey, exactVal] of sortedExactEntries) {
-      if (exactKey.length > 3 && result.includes(exactKey)) {
+      const isMonthAbbreviation = /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)$/.test(exactKey);
+      if ((exactKey.length > 3 || isMonthAbbreviation) && result.includes(exactKey)) {
         result = result.replace(exactKey, exactVal);
       }
     }
