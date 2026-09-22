@@ -832,7 +832,7 @@
   ["Connecting…", "正在连接…"],
   ["Connector, no endpoints", "连接线（无端点）"],
   ["Connector", "连线"],
-  ["Connectors", "连接线"],
+  ["Connectors", "连接器"],
   ["Console", "控制台"],
   ["Constrain proportions", "约束比例"],
   ["Constraints and Resizing", "约束和调整大小"],
@@ -4354,5 +4354,17 @@
   ["Zoom to previous frame", "缩放至上一个画框"],
   ["Zoom to selection", "缩放至选中范围"],
   ["Zoom", "缩放"],
-  ["Zoom/view options", "缩放/视图选项"]
+  ["Zoom/view options", "缩放/视图选项"],
+  ["Shared chat", "共享聊天"],
+  ["Private chat", "私密聊天"],
+  ["Copy link to chat", "复制聊天链接"],
+  ["Available to all file editors", "所有文件编辑者均可访问"],
+  ["Only you can access", "仅你可以访问"],
+  ["Add images and files", "添加图片和文件"],
+  ["Attach Figma files", "添加 Figma 文件"],
+  ["Attach Figma file", "添加 Figma 文件"],
+  ["Add skill", "添加技能"],
+  ["Manage skills", "管理技能"],
+  ["Browse Community", "浏览社区"],
+  ["Skills", "技能"]
 ]
