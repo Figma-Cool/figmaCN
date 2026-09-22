@@ -4366,5 +4366,16 @@
   ["Add skill", "添加技能"],
   ["Manage skills", "管理技能"],
   ["Browse Community", "浏览社区"],
-  ["Skills", "技能"]
+  ["Skills", "技能"],
+  ["Ask for changes", "请求修改"],
+  ["Use your fonts with Figma agents", "使用您的字体与 Figma Agent 配合"],
+  ["This file uses local fonts from your machine. Upload to make them available to the agent. You can view and manage uploaded fonts in Settings at any time.", "此文件使用了您计算机上的本地字体。上传后，Agent 即可使用这些字体。您可以随时在设置中查看和管理已上传的字体。"],
+  ["TrueType Collection files (.ttc) are not supported", "不支持 TrueType Collection 文件（.ttc）"],
+  ["Accept license", "接受许可协议"],
+  ["Manage uploaded fonts", "管理已上传的字体"],
+  ["Upload local fonts", "上传本地字体"],
+  ["Enable libraries for all files in your drafts", "启用组件库，适用于您草稿中的所有文件"],
+  ["You can currently see teammates’ view history in your files, and they can see yours. Learn more", "您可以在文件中查看队友的查看历史记录，他们也可以查看您的历史记录。了解更多"],
+  ["Learn more about captioning here", "了解更多关于隐藏式字幕的信息，请点击这里"],
+  ["Go to folder", "跳转到文件夹"]
 ]
